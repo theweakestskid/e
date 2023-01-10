@@ -1,4 +1,4 @@
-print("chaotic cmds by c a t / da memer el gato #0979")
+print("chaotic xd cmds by c a t / da memer el gato #0979")
 local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
