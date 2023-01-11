@@ -1,9 +1,5 @@
 if works = false then
 print("exploit not supported or bugged")
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "whoops something went wrong..";
-	Text = "exploit not supported or bugged type /console for info please take a screenshot of console and send it in discord c a t / da memer el gato #0979";
-Duration = 16})
 elseif works = true then
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = "Happy Exploiting!";
