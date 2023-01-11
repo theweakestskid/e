@@ -6843,6 +6843,9 @@ end)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/AAAAA.txt",true))()
    elseif cht:match("/e toolgiver") then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Tool%20Giver'))()
+   elseif cht:match("/e longsword") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/fe%20long%20sword.txt",true))()
+
 
      end
 end)
