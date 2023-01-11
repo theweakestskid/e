@@ -1,0 +1,2 @@
+if works = false then
+print("exploit not supported or bugged")
