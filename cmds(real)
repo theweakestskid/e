@@ -1,4 +1,4 @@
-works == true
+works = true
 print("chaotic cmds by c a t / da memer el gato #0979")
 local Player = game.Players.LocalPlayer
 print("if it doesn't work then this doesn't show up :troll:")
