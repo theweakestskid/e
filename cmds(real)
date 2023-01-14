@@ -4993,7 +4993,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main
    elseif cht:match("/e snakeb") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/SnakeBanisherV4.txt",true))()
    elseif cht:match("/e tptool") then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/tp%20tool",true))()  
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/tp%20tool",true))()
     end
 end)
 game:GetService("StarterGui"):SetCore("SendNotification", { 
