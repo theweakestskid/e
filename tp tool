@@ -1,0 +1,13 @@
+	local TpTool = Instance.new("Tool")
+	TpTool.Name = "Teleport Tool"
+	TpTool.RequiresHandle = false
+	TpTool.Parent = game.Players.LocalPlayer.Backpack
+	TpTool.Activated:Connect(function()
+		local Char = game.Players.LocalPlayer.Character or workspace:FindFirstChild(game.Players.LocalPlayer.Name)
+		local HRP = Char and Char:FindFirstChild("HumanoidRootPart")
+		if not Char or not HRP then
+			return
+		end
+		HRP.CFrame = CFrame.new(game.Players.LocalPlayer:GetMouse().Hit.X, game.Players.LocalPlayer:GetMouse().Hit.Y + 3, game.Players.LocalPlayer:GetMouse().Hit.Z, select(4, HRP.CFrame:components()))
+	end)
+end)
