@@ -4992,9 +4992,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/Kool%20gunneer.txt",true))()
    elseif cht:match("/e snakeb") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/SnakeBanisherV4.txt",true))()
-
-
-     end
+   elseif cht:match("/e tptool") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/tp%20tool",true))()  
+    end
 end)
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = "Happy Exploiting!";
