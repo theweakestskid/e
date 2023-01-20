@@ -4992,8 +4992,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/Kool%20gunneer.txt",true))()
    elseif cht:match("/e snakeb") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/SnakeBanisherV4.txt",true))()
-   elseif cht:match("/e tptool") then
+   elseif cht:match("/e terraprisma") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/terrapprisma",true))()
+   elseif cht:match("/e zombiegamer") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/ZOMBIE%20UPRISING%20GUN%20MOD.txt",true))()
 
     end
 end)
