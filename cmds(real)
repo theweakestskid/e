@@ -4996,10 +4996,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/terrapprisma",true))()
    elseif cht:match("/e zombiegamer") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/ZOMBIE%20UPRISING%20GUN%20MOD.txt",true))()
-   elseif cht:match("/e danger") then
+   elseif cht:match("/e test") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/Zombie-Attack-Gui/main/Zombie%20Attack%20V1.lua"))()
-wait(0.1)
-https://raw.githubusercontent.com/YellowGreg/Zombie-Attack-Gui/main/Zombie%20Attack%20V1.lua
 
     end
 end)
