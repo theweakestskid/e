@@ -1,0 +1,1136 @@
+--spec is backkkkkkkkkk
+
+local CrybabyV1FE = Instance.new("ScreenGui")
+local ModMenuFrame1 = Instance.new("Frame")
+local ExMovingFrame1 = Instance.new("Frame")
+local ExampleBar2 = Instance.new("Frame")
+local ExampleBar1 = Instance.new("Frame")
+local ExampleBar4 = Instance.new("Frame")
+local ExampleBar3 = Instance.new("Frame")
+local ExMovingFrame2 = Instance.new("Frame")
+local ExSpiningFrame1 = Instance.new("Frame")
+local HideButton = Instance.new("TextButton")
+local ScriptsButton = Instance.new("TextButton")
+local GamesButton = Instance.new("TextButton")
+local ExampleSpiningFrame = Instance.new("ImageLabel")
+local LogoName3 = Instance.new("TextLabel")
+local LogoName1 = Instance.new("TextLabel")
+local LogoName2 = Instance.new("TextLabel")
+local ScriptsMenuSCALE = Instance.new("Frame")
+local ScriptsMenuFrame1 = Instance.new("Frame")
+local ExStaticFrame4 = Instance.new("Frame")
+local ExStaticFrame2 = Instance.new("Frame")
+local ExStaticFrame1 = Instance.new("Frame")
+local ExStaticFrame3 = Instance.new("Frame")
+local ExStaticFrame5 = Instance.new("Frame")
+local ExMovingFrame4 = Instance.new("Frame")
+local ExStaticFrame6 = Instance.new("Frame")
+local Achromatic = Instance.new("TextButton")
+local Neptunian = Instance.new("TextButton")
+local AudioVIS = Instance.new("TextButton")
+local HatGiver = Instance.new("TextButton")
+local SpinHats = Instance.new("TextButton")
+local FESniper = Instance.new("TextButton")
+local FEStand = Instance.new("TextButton")
+local KillFlingGUI = Instance.new("TextButton")
+local HatHub = Instance.new("TextButton")
+local TextLabel1 = Instance.new("TextLabel")
+local Net = Instance.new("TextButton")
+local ScriptsBUTTON = Instance.new("TextButton")
+local Hide1 = Instance.new("TextButton")
+local Close1 = Instance.new("TextButton")
+local GamesMenuSCALE = Instance.new("Frame")
+local GamesMenuFrame1 = Instance.new("Frame")
+local ExStaticFrame9 = Instance.new("Frame")
+local ExStaticFrame7 = Instance.new("Frame")
+local ExStaticFrame10 = Instance.new("Frame")
+local ExStaticFrame8 = Instance.new("Frame")
+local ExStaticFrame12 = Instance.new("Frame")
+local ExMovingFrame5 = Instance.new("Frame")
+local ExStaticFrame13 = Instance.new("Frame")
+local MM2 = Instance.new("TextButton")
+local RAGDOLL = Instance.new("TextButton")
+local REPUI = Instance.new("TextButton")
+local CLOSE2 = Instance.new("TextButton")
+local textlabelexamplename1 = Instance.new("TextLabel")
+local GAMESBUTTON = Instance.new("TextButton")
+local HIDE2 = Instance.new("TextButton")
+local TEXTnamesad1 = Instance.new("TextLabel")
+
+
+
+CrybabyV1FE.Name = "Din's gui :D"
+CrybabyV1FE.Parent = game.CoreGui
+
+ModMenuFrame1.Name = "ModMenuFrame1"
+ModMenuFrame1.Parent = CrybabyV1FE
+ModMenuFrame1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ModMenuFrame1.BackgroundTransparency = 1.000
+ModMenuFrame1.BorderSizePixel = 0
+ModMenuFrame1.Position = UDim2.new(1, 0, 0, 0)
+ModMenuFrame1.Size = UDim2.new(1, 0, 1, 0)
+
+
+ExMovingFrame1.Name = "ExMovingFrame1"
+ExMovingFrame1.Parent = ModMenuFrame1
+ExMovingFrame1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExMovingFrame1.BackgroundTransparency = 0.200
+ExMovingFrame1.BorderSizePixel = 0
+ExMovingFrame1.Position = UDim2.new(0.61792165, 0, 0.571827292, 0)
+ExMovingFrame1.Rotation = -3.000
+ExMovingFrame1.Size = UDim2.new(0.557885885, 0, 0.262751162, 0)
+
+ExampleBar2.Name = "ExampleBar2"
+ExampleBar2.Parent = ExMovingFrame1
+ExampleBar2.BackgroundColor3 = Color3.fromRGB(162, 32, 255)
+ExampleBar2.BackgroundTransparency = 0.200
+ExampleBar2.BorderSizePixel = 0
+ExampleBar2.Position = UDim2.new(0.00984126609, 0, 0.0851741806, 0)
+ExampleBar2.Size = UDim2.new(1.01353383, 0, 0.130392596, 0)
+ExampleBar2.ZIndex = 2
+
+ExampleBar1.Name = "ExampleBar1"
+ExampleBar1.Parent = ExMovingFrame1
+ExampleBar1.BackgroundColor3 = Color3.fromRGB(162, 32, 255)
+ExampleBar1.BackgroundTransparency = 0.200
+ExampleBar1.BorderSizePixel = 0
+ExampleBar1.Position = UDim2.new(0.0167133417, 0, 0.320221215, 0)
+ExampleBar1.Size = UDim2.new(1, 0, 0.130392596, 0)
+ExampleBar1.ZIndex = 2
+
+ExampleBar4.Name = "ExampleBar4"
+ExampleBar4.Parent = ExMovingFrame1
+ExampleBar4.BackgroundColor3 = Color3.fromRGB(162, 32, 255)
+ExampleBar4.BackgroundTransparency = 0.200
+ExampleBar4.BorderSizePixel = 0
+ExampleBar4.Position = UDim2.new(0.0198805984, 0, 0.558079362, 0)
+ExampleBar4.Size = UDim2.new(1, 0, 0.130392596, 0)
+ExampleBar4.ZIndex = 2
+
+ExampleBar3.Name = "ExampleBar3"
+ExampleBar3.Parent = ExMovingFrame1
+ExampleBar3.BackgroundColor3 = Color3.fromRGB(162, 32, 255)
+ExampleBar3.BackgroundTransparency = 0.200
+ExampleBar3.BorderSizePixel = 0
+ExampleBar3.Position = UDim2.new(0.0170294754, 0, 0.790264726, 0)
+ExampleBar3.Size = UDim2.new(1, 0, 0.130392596, 0)
+ExampleBar3.ZIndex = 2
+
+ExMovingFrame2.Name = "ExMovingFrame2"
+ExMovingFrame2.Parent = ModMenuFrame1
+ExMovingFrame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExMovingFrame2.BackgroundTransparency = 0.500
+ExMovingFrame2.BorderSizePixel = 0
+ExMovingFrame2.Position = UDim2.new(0.522283971, 0, 0.559462547, 0)
+ExMovingFrame2.Size = UDim2.new(0.178691268, 0, 0.329211742, 0)
+ExMovingFrame2.ZIndex = 4
+
+ExSpiningFrame1.Name = "ExSpiningFrame1"
+ExSpiningFrame1.Parent = ModMenuFrame1
+ExSpiningFrame1.BackgroundColor3 = Color3.fromRGB(122, 87, 127)
+ExSpiningFrame1.BackgroundTransparency = 0.300
+ExSpiningFrame1.BorderSizePixel = 0
+ExSpiningFrame1.Position = UDim2.new(0.522283971, 0, 0.559462547, 0)
+ExSpiningFrame1.Rotation = 45.000
+ExSpiningFrame1.Size = UDim2.new(0.178691268, 0, 0.329211742, 0)
+ExSpiningFrame1.ZIndex = 3
+
+HideButton.Name = "HideButton"
+HideButton.Parent = ModMenuFrame1
+HideButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HideButton.BackgroundTransparency = 0.500
+HideButton.BorderSizePixel = 0
+HideButton.Position = UDim2.new(0.528156459, 0, 0.650652647, 0)
+HideButton.Rotation = -2.000
+HideButton.Size = UDim2.new(0.167785242, 0, 0.0463678502, 0)
+HideButton.ZIndex = 5
+HideButton.Font = Enum.Font.Arcade
+HideButton.Text = "Hide"
+HideButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideButton.TextScaled = true
+HideButton.TextSize = 14.000
+HideButton.TextStrokeTransparency = 0.000
+HideButton.TextWrapped = true
+
+ScriptsButton.Name = "ScriptsButton"
+ScriptsButton.Parent = ModMenuFrame1
+ScriptsButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScriptsButton.BackgroundTransparency = 0.500
+ScriptsButton.BorderSizePixel = 0
+ScriptsButton.Position = UDim2.new(0.528156459, 0, 0.711968303, 0)
+ScriptsButton.Rotation = -2.000
+ScriptsButton.Size = UDim2.new(0.167785242, 0, 0.0463678502, 0)
+ScriptsButton.ZIndex = 5
+ScriptsButton.Font = Enum.Font.Arcade
+ScriptsButton.Text = "Scripts"
+ScriptsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptsButton.TextScaled = true
+ScriptsButton.TextSize = 14.000
+ScriptsButton.TextStrokeTransparency = 0.000
+ScriptsButton.TextWrapped = true
+
+GamesButton.Name = "GamesButton"
+GamesButton.Parent = ModMenuFrame1
+GamesButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GamesButton.BackgroundTransparency = 0.500
+GamesButton.BorderSizePixel = 0
+GamesButton.Position = UDim2.new(0.528156459, 0, 0.775537133, 0)
+GamesButton.Rotation = -2.000
+GamesButton.Size = UDim2.new(0.167785242, 0, 0.0463678502, 0)
+GamesButton.ZIndex = 5
+GamesButton.Font = Enum.Font.Arcade
+GamesButton.Text = "Games"
+GamesButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+GamesButton.TextScaled = true
+GamesButton.TextSize = 14.000
+GamesButton.TextStrokeTransparency = 0.000
+GamesButton.TextWrapped = true
+
+ExampleSpiningFrame.Name = "ExampleSpiningFrame"
+ExampleSpiningFrame.Parent = ModMenuFrame1
+ExampleSpiningFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExampleSpiningFrame.BackgroundTransparency = 1.000
+ExampleSpiningFrame.BorderSizePixel = 0
+ExampleSpiningFrame.Position = UDim2.new(0.509700119, 0, 0.536278486, 0)
+ExampleSpiningFrame.Size = UDim2.new(0.204697981, 0, 0.377125204, 0)
+ExampleSpiningFrame.ZIndex = 2
+ExampleSpiningFrame.Image = "rbxassetid://6317848159"
+ExampleSpiningFrame.ImageColor3 = Color3.fromRGB(200, 0, 255)
+
+LogoName3.Name = "LogoName3"
+LogoName3.Parent = ModMenuFrame1
+LogoName3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LogoName3.BackgroundTransparency = 1.000
+LogoName3.Position = UDim2.new(0.528995454, 0, 0.579555273, 0)
+LogoName3.Rotation = -3.000
+LogoName3.Size = UDim2.new(0.152684569, 0, 0.0587326102, 0)
+LogoName3.ZIndex = 5
+LogoName3.Font = Enum.Font.Arcade
+LogoName3.Text = "Din's gui"
+LogoName3.TextColor3 = Color3.fromRGB(255, 255, 255)
+LogoName3.TextScaled = true
+LogoName3.TextSize = 14.000
+LogoName3.TextStrokeTransparency = 0.000
+LogoName3.TextWrapped = true
+
+LogoName1.Name = "LogoName1"
+LogoName1.Parent = ModMenuFrame1
+LogoName1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LogoName1.BackgroundTransparency = 1.000
+LogoName1.Position = UDim2.new(0.528995454, 0, 0.834578395, 0)
+LogoName1.Rotation = 2.000
+LogoName1.Size = UDim2.new(0.110738255, 0, 0.0401854701, 0)
+LogoName1.ZIndex = 5
+LogoName1.Font = Enum.Font.Arcade
+LogoName1.Text = "spec#9001"
+LogoName1.TextColor3 = Color3.fromRGB(255, 255, 255)
+LogoName1.TextScaled = true
+LogoName1.TextSize = 14.000
+LogoName1.TextStrokeTransparency = 0.000
+LogoName1.TextWrapped = true
+
+LogoName2.Name = "LogoName2"
+LogoName2.Parent = ModMenuFrame1
+LogoName2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LogoName2.BackgroundTransparency = 1.000
+LogoName2.Position = UDim2.new(0.659028947, 0, 0.834578395, 0)
+LogoName2.Rotation = -2.000
+LogoName2.Size = UDim2.new(0.0318791941, 0, 0.0401854701, 0)
+LogoName2.ZIndex = 5
+LogoName2.Font = Enum.Font.Arcade
+LogoName2.Text = "FE"
+LogoName2.TextColor3 = Color3.fromRGB(255, 255, 255)
+LogoName2.TextScaled = true
+LogoName2.TextSize = 14.000
+LogoName2.TextStrokeTransparency = 0.000
+LogoName2.TextWrapped = true
+
+ScriptsMenuSCALE.Name = "ScriptsMenuSCALE"
+ScriptsMenuSCALE.Parent = CrybabyV1FE
+ScriptsMenuSCALE.BackgroundColor3 = Color3.fromRGB(3, 0, 7)
+ScriptsMenuSCALE.BackgroundTransparency = 1.000
+ScriptsMenuSCALE.BorderSizePixel = 0
+ScriptsMenuSCALE.Position = UDim2.new(0, 0, 2, 0)
+ScriptsMenuSCALE.Size = UDim2.new(1, 0, 1, 0)
+
+ScriptsMenuFrame1.Name = "ScriptsMenuFrame1"
+ScriptsMenuFrame1.Parent = ScriptsMenuSCALE
+ScriptsMenuFrame1.BackgroundColor3 = Color3.fromRGB(3, 0, 7)
+ScriptsMenuFrame1.BackgroundTransparency = 1.000
+ScriptsMenuFrame1.BorderSizePixel = 0
+ScriptsMenuFrame1.Size = UDim2.new(1, 0, 1, 0)
+
+ExStaticFrame4.Name = "ExStaticFrame4"
+ExStaticFrame4.Parent = ScriptsMenuFrame1
+ExStaticFrame4.BackgroundColor3 = Color3.fromRGB(81, 21, 154)
+ExStaticFrame4.BackgroundTransparency = 0.150
+ExStaticFrame4.BorderSizePixel = 0
+ExStaticFrame4.Position = UDim2.new(0.0958653316, 0, 0.0512682833, 0)
+ExStaticFrame4.Rotation = 3.000
+ExStaticFrame4.Size = UDim2.new(0.139043644, 0, 0.862962961, 0)
+ExStaticFrame4.ZIndex = 4
+
+ExStaticFrame2.Name = "ExStaticFrame2"
+ExStaticFrame2.Parent = ScriptsMenuFrame1
+ExStaticFrame2.BackgroundColor3 = Color3.fromRGB(98, 33, 154)
+ExStaticFrame2.BackgroundTransparency = 0.150
+ExStaticFrame2.BorderSizePixel = 0
+ExStaticFrame2.Position = UDim2.new(0.0471283793, 0, 0.237379387, 0)
+ExStaticFrame2.Rotation = 3.000
+ExStaticFrame2.Size = UDim2.new(0.0893510729, 0, 0.862962961, 0)
+ExStaticFrame2.ZIndex = 5
+
+ExStaticFrame1.Name = "ExStaticFrame1"
+ExStaticFrame1.Parent = ScriptsMenuFrame1
+ExStaticFrame1.BackgroundColor3 = Color3.fromRGB(125, 10, 154)
+ExStaticFrame1.BackgroundTransparency = 0.150
+ExStaticFrame1.BorderSizePixel = 0
+ExStaticFrame1.Position = UDim2.new(0.0166768152, 0, -0.109588735, 0)
+ExStaticFrame1.Rotation = 3.000
+ExStaticFrame1.Size = UDim2.new(0.101774231, 0, 0.811783195, 0)
+ExStaticFrame1.ZIndex = 2
+
+ExStaticFrame3.Name = "ExStaticFrame3"
+ExStaticFrame3.Parent = ScriptsMenuFrame1
+ExStaticFrame3.BackgroundColor3 = Color3.fromRGB(125, 10, 154)
+ExStaticFrame3.BackgroundTransparency = 0.150
+ExStaticFrame3.BorderSizePixel = 0
+ExStaticFrame3.Position = UDim2.new(0.15763171, 0, 0.578459859, 0)
+ExStaticFrame3.Rotation = 2.000
+ExStaticFrame3.Size = UDim2.new(0.0563819632, 0, 0.608333349, 0)
+ExStaticFrame3.ZIndex = 5
+
+ExStaticFrame5.Name = "ExStaticFrame5"
+ExStaticFrame5.Parent = ScriptsMenuFrame1
+ExStaticFrame5.BackgroundColor3 = Color3.fromRGB(94, 9, 154)
+ExStaticFrame5.BackgroundTransparency = 0.150
+ExStaticFrame5.BorderSizePixel = 0
+ExStaticFrame5.Position = UDim2.new(0.166397005, 0, -0.101411045, 0)
+ExStaticFrame5.Rotation = 3.000
+ExStaticFrame5.Size = UDim2.new(0.0645047873, 0, 0.297707349, 0)
+ExStaticFrame5.ZIndex = 5
+
+ExMovingFrame4.Name = "ExMovingFrame4"
+ExMovingFrame4.Parent = ScriptsMenuFrame1
+ExMovingFrame4.BackgroundColor3 = Color3.fromRGB(37, 19, 48)
+ExMovingFrame4.BackgroundTransparency = 0.150
+ExMovingFrame4.BorderSizePixel = 0
+ExMovingFrame4.Position = UDim2.new(0.0254420657, 0, -0.0879629627, 0)
+ExMovingFrame4.Rotation = 2.000
+ExMovingFrame4.Size = UDim2.new(0.183002487, 0, 1.11759257, 0)
+
+ExStaticFrame6.Name = "ExStaticFrame6"
+ExStaticFrame6.Parent = ScriptsMenuFrame1
+ExStaticFrame6.BackgroundColor3 = Color3.fromRGB(73, 7, 154)
+ExStaticFrame6.BackgroundTransparency = 0.150
+ExStaticFrame6.BorderSizePixel = 0
+ExStaticFrame6.Position = UDim2.new(0.00721289916, 0, 0.782163441, 0)
+ExStaticFrame6.Rotation = 4.000
+ExStaticFrame6.Size = UDim2.new(0.074061051, 0, 0.230555549, 0)
+ExStaticFrame6.ZIndex = 5
+
+Achromatic.Name = "Achromatic"
+Achromatic.Parent = ScriptsMenuFrame1
+Achromatic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Achromatic.BackgroundTransparency = 0.500
+Achromatic.BorderSizePixel = 0
+Achromatic.Position = UDim2.new(0.0450484902, 0, 0.135116458, 0)
+Achromatic.Rotation = 3.000
+Achromatic.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+Achromatic.ZIndex = 6
+Achromatic.Font = Enum.Font.Arcade
+Achromatic.Text = "Achromatic"
+Achromatic.TextColor3 = Color3.fromRGB(255, 255, 255)
+Achromatic.TextScaled = true
+Achromatic.TextSize = 14.000
+Achromatic.TextStrokeTransparency = 0.000
+Achromatic.TextWrapped = true
+
+Neptunian.Name = "Neptunian"
+Neptunian.Parent = ScriptsMenuFrame1
+Neptunian.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Neptunian.BackgroundTransparency = 0.500
+Neptunian.BorderSizePixel = 0
+Neptunian.Position = UDim2.new(0.0412435979, 0, 0.212542027, 0)
+Neptunian.Rotation = 3.000
+Neptunian.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+Neptunian.ZIndex = 6
+Neptunian.Font = Enum.Font.Arcade
+Neptunian.Text = "Neptunian V"
+Neptunian.TextColor3 = Color3.fromRGB(255, 255, 255)
+Neptunian.TextScaled = true
+Neptunian.TextSize = 14.000
+Neptunian.TextStrokeTransparency = 0.000
+Neptunian.TextWrapped = true
+
+AudioVIS.Name = "AudioVIS"
+AudioVIS.Parent = ScriptsMenuFrame1
+AudioVIS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AudioVIS.BackgroundTransparency = 0.500
+AudioVIS.BorderSizePixel = 0
+AudioVIS.Position = UDim2.new(0.0374876596, 0, 0.291819394, 0)
+AudioVIS.Rotation = 3.000
+AudioVIS.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+AudioVIS.ZIndex = 6
+AudioVIS.Font = Enum.Font.Arcade
+AudioVIS.Text = "Visualizer"
+AudioVIS.TextColor3 = Color3.fromRGB(255, 255, 255)
+AudioVIS.TextScaled = true
+AudioVIS.TextSize = 14.000
+AudioVIS.TextStrokeTransparency = 0.000
+AudioVIS.TextWrapped = true
+
+HatGiver.Name = "HatGiver"
+HatGiver.Parent = ScriptsMenuFrame1
+HatGiver.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HatGiver.BackgroundTransparency = 0.500
+HatGiver.BorderSizePixel = 0
+HatGiver.Position = UDim2.new(0.03197347, 0, 0.546432734, 0)
+HatGiver.Rotation = 3.000
+HatGiver.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+HatGiver.ZIndex = 6
+HatGiver.Font = Enum.Font.Arcade
+HatGiver.Text = "Hold Hat"
+HatGiver.TextColor3 = Color3.fromRGB(255, 255, 255)
+HatGiver.TextScaled = true
+HatGiver.TextSize = 14.000
+HatGiver.TextStrokeTransparency = 0.000
+HatGiver.TextWrapped = true
+
+SpinHats.Name = "SpinHats"
+SpinHats.Parent = ScriptsMenuFrame1
+SpinHats.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SpinHats.BackgroundTransparency = 0.500
+SpinHats.BorderSizePixel = 0
+SpinHats.Position = UDim2.new(0.032059107, 0, 0.462832093, 0)
+SpinHats.Rotation = 3.000
+SpinHats.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+SpinHats.ZIndex = 6
+SpinHats.Font = Enum.Font.Arcade
+SpinHats.Text = "Spin Hats"
+SpinHats.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpinHats.TextScaled = true
+SpinHats.TextSize = 14.000
+SpinHats.TextStrokeTransparency = 0.000
+SpinHats.TextWrapped = true
+
+FESniper.Name = "FESniper"
+FESniper.Parent = ScriptsMenuFrame1
+FESniper.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FESniper.BackgroundTransparency = 0.500
+FESniper.BorderSizePixel = 0
+FESniper.Position = UDim2.new(0.0363236479, 0, 0.37675944, 0)
+FESniper.Rotation = 3.000
+FESniper.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+FESniper.ZIndex = 6
+FESniper.Font = Enum.Font.Arcade
+FESniper.Text = "Fe gunner"
+FESniper.TextColor3 = Color3.fromRGB(255, 255, 255)
+FESniper.TextScaled = true
+FESniper.TextSize = 14.000
+FESniper.TextStrokeTransparency = 0.000
+FESniper.TextWrapped = true
+
+FEStand.Name = "FEStand"
+FEStand.Parent = ScriptsMenuFrame1
+FEStand.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FEStand.BackgroundTransparency = 0.500
+FEStand.BorderSizePixel = 0
+FEStand.Position = UDim2.new(0.0266672615, 0, 0.627156615, 0)
+FEStand.Rotation = 3.000
+FEStand.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+FEStand.ZIndex = 6
+FEStand.Font = Enum.Font.Arcade
+FEStand.Text = "Pendulum hub v5"
+FEStand.TextColor3 = Color3.fromRGB(255, 255, 255)
+FEStand.TextScaled = true
+FEStand.TextSize = 14.000
+FEStand.TextStrokeTransparency = 0.000
+FEStand.TextWrapped = true
+
+KillFlingGUI.Name = "KillFlingGUI"
+KillFlingGUI.Parent = ScriptsMenuFrame1
+KillFlingGUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KillFlingGUI.BackgroundTransparency = 0.500
+KillFlingGUI.BorderSizePixel = 0
+KillFlingGUI.Position = UDim2.new(0.0261464287, 0, 0.708638072, 0)
+KillFlingGUI.Rotation = 3.000
+KillFlingGUI.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+KillFlingGUI.ZIndex = 6
+KillFlingGUI.Font = Enum.Font.Arcade
+KillFlingGUI.Text = "Kill/Fling GUI"
+KillFlingGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+KillFlingGUI.TextScaled = true
+KillFlingGUI.TextSize = 14.000
+KillFlingGUI.TextStrokeTransparency = 0.000
+KillFlingGUI.TextWrapped = true
+
+HatHub.Name = "HatHub"
+HatHub.Parent = ScriptsMenuFrame1
+HatHub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HatHub.BackgroundTransparency = 0.500
+HatHub.BorderSizePixel = 0
+HatHub.Position = UDim2.new(0.0261464287, 0, 0.792897344, 0)
+HatHub.Rotation = 3.000
+HatHub.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+HatHub.ZIndex = 6
+HatHub.Font = Enum.Font.Arcade
+HatHub.Text = "Myworld's info scirpt"
+HatHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+HatHub.TextScaled = true
+HatHub.TextSize = 14.000
+HatHub.TextStrokeTransparency = 0.000
+HatHub.TextWrapped = true
+
+TextLabel1.Name = "TextLabel1"
+TextLabel1.Parent = ScriptsMenuFrame1
+TextLabel1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel1.BackgroundTransparency = 1.000
+TextLabel1.Position = UDim2.new(0.0550370887, 0, 0.0175182261, 0)
+TextLabel1.Rotation = 3.000
+TextLabel1.Size = UDim2.new(0.152684569, 0, 0.0587326102, 0)
+TextLabel1.ZIndex = 6
+TextLabel1.Font = Enum.Font.Arcade
+TextLabel1.Text = "All FE bois"
+TextLabel1.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel1.TextScaled = true
+TextLabel1.TextSize = 14.000
+TextLabel1.TextStrokeTransparency = 0.000
+TextLabel1.TextWrapped = true
+
+Net.Name = "Net"
+Net.Parent = ScriptsMenuFrame1
+Net.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Net.BackgroundTransparency = 0.500
+Net.BorderSizePixel = 0
+Net.Position = UDim2.new(0.0162505936, 0, 0.915796518, 0)
+Net.Rotation = 3.000
+Net.Size = UDim2.new(0.0526693426, 0, 0.0430742987, 0)
+Net.ZIndex = 6
+Net.Font = Enum.Font.Arcade
+Net.Text = "Net"
+Net.TextColor3 = Color3.fromRGB(255, 255, 255)
+Net.TextScaled = true
+Net.TextSize = 14.000
+Net.TextStrokeTransparency = 0.000
+Net.TextWrapped = true
+
+ScriptsBUTTON.Name = "ScriptsBUTTON"
+ScriptsBUTTON.Parent = ScriptsMenuFrame1
+ScriptsBUTTON.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScriptsBUTTON.BackgroundTransparency = 1.000
+ScriptsBUTTON.BorderSizePixel = 0
+ScriptsBUTTON.Position = UDim2.new(0.0497738048, 0, -0.0787037015, 0)
+ScriptsBUTTON.Rotation = 2.000
+ScriptsBUTTON.Size = UDim2.new(0.154501244, 0, 0.0497517735, 0)
+ScriptsBUTTON.ZIndex = 6
+ScriptsBUTTON.Font = Enum.Font.Arcade
+ScriptsBUTTON.Text = "scripts"
+ScriptsBUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptsBUTTON.TextScaled = true
+ScriptsBUTTON.TextSize = 14.000
+ScriptsBUTTON.TextStrokeTransparency = 0.000
+ScriptsBUTTON.TextWrapped = true
+ScriptsBUTTON.MouseButton1Click:connect(function()
+ScriptsMenuSCALE:TweenPosition(UDim2.new(0,0,0,0),"InOut","Sine",1)
+end)
+
+Hide1.Name = "Hide1"
+Hide1.Parent = ScriptsMenuFrame1
+Hide1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Hide1.BackgroundTransparency = 0.500
+Hide1.BorderSizePixel = 0
+Hide1.Position = UDim2.new(0.134916946, 0, 0.915796518, 0)
+Hide1.Rotation = 3.000
+Hide1.Size = UDim2.new(0.027579451, 0, 0.0430742987, 0)
+Hide1.ZIndex = 6
+Hide1.Font = Enum.Font.Arcade
+Hide1.Text = "-"
+Hide1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hide1.TextScaled = true
+Hide1.TextSize = 14.000
+Hide1.TextStrokeTransparency = 0.000
+Hide1.TextWrapped = true
+
+Close1.Name = "Close1"
+Close1.Parent = ScriptsMenuFrame1
+Close1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close1.BackgroundTransparency = 0.500
+Close1.BorderSizePixel = 0
+Close1.Position = UDim2.new(0.168250278, 0, 0.915796518, 0)
+Close1.Rotation = 3.000
+Close1.Size = UDim2.new(0.027579451, 0, 0.0430742987, 0)
+Close1.ZIndex = 6
+Close1.Font = Enum.Font.Arcade
+Close1.Text = "X"
+Close1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close1.TextScaled = true
+Close1.TextSize = 14.000
+Close1.TextStrokeTransparency = 0.000
+Close1.TextWrapped = true
+
+GamesMenuSCALE.Name = "GamesMenuSCALE"
+GamesMenuSCALE.Parent = CrybabyV1FE
+GamesMenuSCALE.BackgroundColor3 = Color3.fromRGB(3, 0, 7)
+GamesMenuSCALE.BackgroundTransparency = 1.000
+GamesMenuSCALE.BorderSizePixel = 0
+GamesMenuSCALE.Position = UDim2.new(0, 0, 2, 0)
+GamesMenuSCALE.Size = UDim2.new(1, 0, 1, 0)
+
+GamesMenuFrame1.Name = "GamesMenuFrame1"
+GamesMenuFrame1.Parent = GamesMenuSCALE
+GamesMenuFrame1.BackgroundColor3 = Color3.fromRGB(3, 0, 7)
+GamesMenuFrame1.BackgroundTransparency = 1.000
+GamesMenuFrame1.BorderSizePixel = 0
+GamesMenuFrame1.Size = UDim2.new(1, 0, 1, 0)
+
+ExStaticFrame9.Name = "ExStaticFrame9"
+ExStaticFrame9.Parent = GamesMenuFrame1
+ExStaticFrame9.BackgroundColor3 = Color3.fromRGB(81, 21, 154)
+ExStaticFrame9.BackgroundTransparency = 0.150
+ExStaticFrame9.BorderSizePixel = 0
+ExStaticFrame9.Position = UDim2.new(0.333886176, 0, 0.0605275445, 0)
+ExStaticFrame9.Rotation = 3.000
+ExStaticFrame9.Size = UDim2.new(0.139043644, 0, 0.862962961, 0)
+ExStaticFrame9.ZIndex = 4
+
+ExStaticFrame7.Name = "ExStaticFrame7"
+ExStaticFrame7.Parent = GamesMenuFrame1
+ExStaticFrame7.BackgroundColor3 = Color3.fromRGB(98, 33, 154)
+ExStaticFrame7.BackgroundTransparency = 0.150
+ExStaticFrame7.BorderSizePixel = 0
+ExStaticFrame7.Position = UDim2.new(0.285149217, 0, 0.246638656, 0)
+ExStaticFrame7.Rotation = 3.000
+ExStaticFrame7.Size = UDim2.new(0.0893510729, 0, 0.862962961, 0)
+ExStaticFrame7.ZIndex = 5
+
+ExStaticFrame10.Name = "ExStaticFrame10"
+ExStaticFrame10.Parent = GamesMenuFrame1
+ExStaticFrame10.BackgroundColor3 = Color3.fromRGB(125, 10, 154)
+ExStaticFrame10.BackgroundTransparency = 0.150
+ExStaticFrame10.BorderSizePixel = 0
+ExStaticFrame10.Position = UDim2.new(0.254697651, 0, -0.100329481, 0)
+ExStaticFrame10.Rotation = 3.000
+ExStaticFrame10.Size = UDim2.new(0.101774231, 0, 0.811783195, 0)
+ExStaticFrame10.ZIndex = 2
+
+ExStaticFrame8.Name = "ExStaticFrame8"
+ExStaticFrame8.Parent = GamesMenuFrame1
+ExStaticFrame8.BackgroundColor3 = Color3.fromRGB(125, 10, 154)
+ExStaticFrame8.BackgroundTransparency = 0.150
+ExStaticFrame8.BorderSizePixel = 0
+ExStaticFrame8.Position = UDim2.new(0.395652562, 0, 0.587719142, 0)
+ExStaticFrame8.Rotation = 2.000
+ExStaticFrame8.Size = UDim2.new(0.0563819632, 0, 0.608333349, 0)
+ExStaticFrame8.ZIndex = 5
+
+ExStaticFrame12.Name = "ExStaticFrame12"
+ExStaticFrame12.Parent = GamesMenuFrame1
+ExStaticFrame12.BackgroundColor3 = Color3.fromRGB(94, 9, 154)
+ExStaticFrame12.BackgroundTransparency = 0.150
+ExStaticFrame12.BorderSizePixel = 0
+ExStaticFrame12.Position = UDim2.new(0.404417843, 0, -0.0921517909, 0)
+ExStaticFrame12.Rotation = 3.000
+ExStaticFrame12.Size = UDim2.new(0.0645047873, 0, 0.297707349, 0)
+ExStaticFrame12.ZIndex = 5
+
+ExMovingFrame5.Name = "ExMovingFrame5"
+ExMovingFrame5.Parent = GamesMenuFrame1
+ExMovingFrame5.BackgroundColor3 = Color3.fromRGB(37, 19, 48)
+ExMovingFrame5.BackgroundTransparency = 0.150
+ExMovingFrame5.BorderSizePixel = 0
+ExMovingFrame5.Position = UDim2.new(0.263462901, 0, -0.0787037089, 0)
+ExMovingFrame5.Rotation = 2.000
+ExMovingFrame5.Size = UDim2.new(0.183002487, 0, 1.11759257, 0)
+
+ExStaticFrame13.Name = "ExStaticFrame13"
+ExStaticFrame13.Parent = GamesMenuFrame1
+ExStaticFrame13.BackgroundColor3 = Color3.fromRGB(73, 7, 154)
+ExStaticFrame13.BackgroundTransparency = 0.150
+ExStaticFrame13.BorderSizePixel = 0
+ExStaticFrame13.Position = UDim2.new(0.245233744, 0, 0.791422725, 0)
+ExStaticFrame13.Rotation = 4.000
+ExStaticFrame13.Size = UDim2.new(0.074061051, 0, 0.230555549, 0)
+ExStaticFrame13.ZIndex = 5
+
+MM2.Name = "MM2"
+MM2.Parent = GamesMenuFrame1
+MM2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MM2.BackgroundTransparency = 0.500
+MM2.BorderSizePixel = 0
+MM2.Position = UDim2.new(0.283069342, 0, 0.144375727, 0)
+MM2.Rotation = 3.000
+MM2.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+MM2.ZIndex = 6
+MM2.Font = Enum.Font.Arcade
+MM2.Text = "MM2"
+MM2.TextColor3 = Color3.fromRGB(255, 255, 255)
+MM2.TextScaled = true
+MM2.TextSize = 14.000
+MM2.TextStrokeTransparency = 0.000
+MM2.TextWrapped = true
+
+RAGDOLL.Name = "RAGDOLL"
+RAGDOLL.Parent = GamesMenuFrame1
+RAGDOLL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RAGDOLL.BackgroundTransparency = 0.500
+RAGDOLL.BorderSizePixel = 0
+RAGDOLL.Position = UDim2.new(0.27926445, 0, 0.221801296, 0)
+RAGDOLL.Rotation = 3.000
+RAGDOLL.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+RAGDOLL.ZIndex = 6
+RAGDOLL.Font = Enum.Font.Arcade
+RAGDOLL.Text = "Ragdoll"
+RAGDOLL.TextColor3 = Color3.fromRGB(255, 255, 255)
+RAGDOLL.TextScaled = true
+RAGDOLL.TextSize = 14.000
+RAGDOLL.TextStrokeTransparency = 0.000
+RAGDOLL.TextWrapped = true
+
+REPUI.Name = "REPUI"
+REPUI.Parent = GamesMenuFrame1
+REPUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+REPUI.BackgroundTransparency = 0.500
+REPUI.BorderSizePixel = 0
+REPUI.Position = UDim2.new(0.275508493, 0, 0.301078647, 0)
+REPUI.Rotation = 3.000
+REPUI.Size = UDim2.new(0.17172654, 0, 0.056714233, 0)
+REPUI.ZIndex = 6
+REPUI.Font = Enum.Font.Arcade
+REPUI.Text = "Rep UI (1&2)"
+REPUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+REPUI.TextScaled = true
+REPUI.TextSize = 14.000
+REPUI.TextStrokeTransparency = 0.000
+REPUI.TextWrapped = true
+
+CLOSE2.Name = "CLOSE2"
+CLOSE2.Parent = GamesMenuFrame1
+CLOSE2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CLOSE2.BackgroundTransparency = 0.500
+CLOSE2.BorderSizePixel = 0
+CLOSE2.Position = UDim2.new(0.40627113, 0, 0.925055802, 0)
+CLOSE2.Rotation = 3.000
+CLOSE2.Size = UDim2.new(0.027579451, 0, 0.0430742987, 0)
+CLOSE2.ZIndex = 6
+CLOSE2.Font = Enum.Font.Arcade
+CLOSE2.Text = "X"
+CLOSE2.TextColor3 = Color3.fromRGB(255, 255, 255)
+CLOSE2.TextScaled = true
+CLOSE2.TextSize = 14.000
+CLOSE2.TextStrokeTransparency = 0.000
+CLOSE2.TextWrapped = true
+
+textlabelexamplename1.Name = "textlabelexamplename1"
+textlabelexamplename1.Parent = GamesMenuFrame1
+textlabelexamplename1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+textlabelexamplename1.BackgroundTransparency = 1.000
+textlabelexamplename1.Position = UDim2.new(0.293057948, 0, 0.0267774835, 0)
+textlabelexamplename1.Rotation = 3.000
+textlabelexamplename1.Size = UDim2.new(0.152684569, 0, 0.0587326102, 0)
+textlabelexamplename1.ZIndex = 6
+textlabelexamplename1.Font = Enum.Font.Arcade
+textlabelexamplename1.Text = "pog moment"
+textlabelexamplename1.TextColor3 = Color3.fromRGB(255, 255, 255)
+textlabelexamplename1.TextScaled = true
+textlabelexamplename1.TextSize = 14.000
+textlabelexamplename1.TextStrokeTransparency = 0.000
+textlabelexamplename1.TextWrapped = true
+
+GAMESBUTTON.Name = "GAMESBUTTON"
+GAMESBUTTON.Parent = GamesMenuFrame1
+GAMESBUTTON.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GAMESBUTTON.BackgroundTransparency = 1.000
+GAMESBUTTON.BorderSizePixel = 0
+GAMESBUTTON.Position = UDim2.new(0.28779465, 0, -0.0787037089, 0)
+GAMESBUTTON.Rotation = 2.000
+GAMESBUTTON.Size = UDim2.new(0.154501244, 0, 0.0497517735, 0)
+GAMESBUTTON.ZIndex = 6
+GAMESBUTTON.Font = Enum.Font.Arcade
+GAMESBUTTON.Text = "games"
+GAMESBUTTON.TextColor3 = Color3.fromRGB(255, 255, 255)
+GAMESBUTTON.TextScaled = true
+GAMESBUTTON.TextSize = 14.000
+GAMESBUTTON.TextStrokeTransparency = 0.000
+GAMESBUTTON.TextWrapped = true
+GAMESBUTTON.MouseButton1Click:connect(function()
+GamesMenuSCALE:TweenPosition(UDim2.new(0,0,0,0),"InOut","Sine",1)
+end)
+
+HIDE2.Name = "HIDE2"
+HIDE2.Parent = GamesMenuFrame1
+HIDE2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HIDE2.BackgroundTransparency = 0.500
+HIDE2.BorderSizePixel = 0
+HIDE2.Position = UDim2.new(0.372937799, 0, 0.925055802, 0)
+HIDE2.Rotation = 3.000
+HIDE2.Size = UDim2.new(0.027579451, 0, 0.0430742987, 0)
+HIDE2.ZIndex = 6
+HIDE2.Font = Enum.Font.Arcade
+HIDE2.Text = "-"
+HIDE2.TextColor3 = Color3.fromRGB(255, 255, 255)
+HIDE2.TextScaled = true
+HIDE2.TextSize = 14.000
+HIDE2.TextStrokeTransparency = 0.000
+HIDE2.TextWrapped = true
+
+TEXTnamesad1.Name = "TEXTnamesad1"
+TEXTnamesad1.Parent = GamesMenuFrame1
+TEXTnamesad1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TEXTnamesad1.BackgroundTransparency = 1.000
+TEXTnamesad1.Position = UDim2.new(0.284724623, 0, 0.417518288, 0)
+TEXTnamesad1.Rotation = 3.000
+TEXTnamesad1.Size = UDim2.new(0.152684569, 0, 0.0587326102, 0)
+TEXTnamesad1.ZIndex = 6
+TEXTnamesad1.Font = Enum.Font.Arcade
+TEXTnamesad1.Text = "looks empty i wonder what i should add"
+TEXTnamesad1.TextColor3 = Color3.fromRGB(255, 255, 255)
+TEXTnamesad1.TextScaled = true
+TEXTnamesad1.TextSize = 14.000
+TEXTnamesad1.TextStrokeTransparency = 0.000
+TEXTnamesad1.TextWrapped = true
+
+
+
+--rotate for exmovingframe
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = ExMovingFrame1 --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = -3 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+--rotate for exmovingframe2
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = ExMovingFrame2 --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = -3 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+--rotate for exmovingframe2
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = ScriptsButton --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = -3 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+--load
+
+wait(.1)
+ModMenuFrame1:TweenPosition(UDim2.new(0.2,0,0,0),"InOut","Sine",1)
+ScriptsMenuSCALE:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",1)
+GamesMenuSCALE:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",1)
+
+
+--rotate for exmovingframe2
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = GamesButton --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = -3 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+--rotate for exmovingframe2
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = HideButton --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = -3 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+--rotate for exmovingframe2
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = LogoName2 --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = -3 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+--rotate for exmovingframe2
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = LogoName3 --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = -3 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+--rotate for exmovingframe2
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = ScriptsMenuFrame1 --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = 0 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+
+--rotate for exmovingframe2
+
+--Things that you can change have been marked by *
+
+local TweenService = game:GetService("TweenService") --Get Tween Service
+
+local Gui = GamesMenuFrame1 --*The gui that we want to tween
+
+local goal1 = {
+    Rotation = -1 --*The Property Goal we want to change
+}
+
+local goal2 = {
+    Rotation = 0 --*The reverse of Goal1
+}
+
+TweenTime = 2 --*The length of the tween
+
+local tweenInfo = TweenInfo.new(TweenTime, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) --Create a tweeninfo (TweenTime, Style, Direction)
+
+local tween1 = TweenService:Create(Gui, tweenInfo, goal1) --Create the first tween (using properties goal1), (Instance, TweenInfo, Goal)
+local tween2 = TweenService:Create(Gui, tweenInfo, goal2) --Create the second tween (using properties goal2)
+
+spawn(function() --so code after this can run
+    while true do --create a loop
+        tween1:Play() --Play the first tween
+        wait(TweenTime) --wait until the tween has finished
+        tween2:Play() --do the second tween
+        wait(TweenTime) --wait until second tween has finished
+    end
+end)
+
+--load
+
+wait(.1)
+ModMenuFrame1:TweenPosition(UDim2.new(0.2,0,0,0),"InOut","Sine",1)
+ScriptsMenuSCALE:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",1)
+GamesMenuSCALE:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",1)
+
+--load
+
+wait(.1)
+ModMenuFrame1:TweenPosition(UDim2.new(0.2,0,0,0),"InOut","Sine",1)
+ScriptsMenuSCALE:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",1)
+GamesMenuSCALE:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",1)
+
+--close
+Close1.MouseButton1Click:connect(function()
+ScriptsMenuSCALE:TweenPosition(UDim2.new(0,0,2,0),"InOut","Sine",1)
+end)
+CLOSE2.MouseButton1Click:connect(function()
+GamesMenuSCALE:TweenPosition(UDim2.new(0,0,2,0),"InOut","Sine",1)
+end)
+
+--hide
+Hide1.MouseButton1Click:connect(function()
+ScriptsMenuSCALE:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",1)
+end)
+HIDE2.MouseButton1Click:connect(function()
+GamesMenuSCALE:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",1)
+end)
+  --hidebutton
+HideButton.MouseButton1Click:connect(function()
+ModMenuFrame1:TweenPosition(UDim2.new(1,0,0,0),"InOut","Sine",1)
+GamesMenuSCALE:TweenPosition(UDim2.new(0,0,2,0),"InOut","Sine",1)
+ScriptsMenuSCALE:TweenPosition(UDim2.new(0,0,2,0),"InOut","Sine",1)
+wait(1)
+CrybabyV1FE:Destroy()
+end)
+
+
+Spinny = ExSpiningFrame1
+
+while true do
+wait(0.01)
+Spinny.Rotation = Spinny.Rotation + -15
+end
