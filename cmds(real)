@@ -5000,6 +5000,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main
 loadstring(game:HttpGet("https://raw.githubusercontent.com/anisnouacer1/My-Roblox-Scripts/main/Zombie%20Attack.lua"))()
    elseif cht:match("/e hoho") then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/HohoHub.lua'))()
+   elseif cht:match ("/e cheat") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Chest_onoff"))()
 
     end
 end)
