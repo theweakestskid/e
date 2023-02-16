@@ -1,0 +1,23 @@
+
+local use = idk
+
+if use then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/cmds(real)",true))()
+elseif not use then
+print("okie dokie")
+end
+
+wait(0.5)
+if works == true then
+print("happy exploiting!")
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Happy Exploiting!";
+	Text = "Scirpt ran without any problems!";
+Duration = 16})
+else
+print ("oop")
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Whoops...";
+	Text = "bugged or exploit unsupported";
+Duration = 16})
+end
