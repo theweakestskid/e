@@ -4,7 +4,7 @@ local use = idk
 if use then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/cmds(real)",true))()
 elseif not use then
-print("okie dokie")
+print("okiee")
 end
 
 wait(0.5)
