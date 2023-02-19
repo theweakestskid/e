@@ -1,0 +1,69 @@
+local Player = game.Players.LocalPlayer 
+local Character = Player.Character 
+
+-- GUI Window 
+local GUI = Instance.new("ScreenGui", Player.PlayerGui) 
+GUI.Name = "Exploit GUI" 
+
+-- Main Frame 
+local MainFrame = Instance.new("Frame", GUI) 
+MainFrame.BackgroundColor3 = Color3.new(0, 0, 0) 
+MainFrame.BorderSizePixel = 0 
+MainFrame.Position = UDim2.new(0.5, -150, 0.5, -150) 
+MainFrame.Size = UDim2.new(0, 300, 0, 300) 
+
+-- Title 
+local Title = Instance.new("TextLabel", MainFrame) 
+Title.BackgroundColor3 = Color3.new(1, 1, 1) 
+Title.BorderSizePixel = 0 
+Title.Position = UDim2.new(0, 0, 0, 0) 
+Title.Size = UDim2.new(1, 0, 0.2, 0) 
+Title.Font = Enum.Font.SourceSans 
+Title.Text = "Exploit GUI" 
+Title.TextColor3 = Color3.new(0, 0, 0) 
+Title.TextSize = 25 
+
+-- Teleport Button 
+local TeleportButton = Instance.new("TextButton", MainFrame) 
+TeleportButton.BackgroundColor3 = Color3.new(1, 1, 1) 
+TeleportButton.BorderSizePixel = 0 
+TeleportButton.Position = UDim2.new(0, 0, 0.2, 0) 
+TeleportButton.Size = UDim2.new(1, 0, 0.2, 0) 
+TeleportButton.Font = Enum.Font.SourceSans 
+TeleportButton.Text = "Teleport" 
+TeleportButton.TextColor3 = Color3.new(0, 0, 0) 
+TeleportButton.TextSize = 25 
+TeleportButton.MouseButton1Click:connect(function() 
+	Character:MoveTo(workspace.SpawnLocation.Value) 
+end) 
+
+-- Noclip Button 
+local NoclipButton = Instance.new("TextButton", MainFrame) 
+NoclipButton.BackgroundColor3 = Color3.new(1, 1, 1) 
+NoclipButton.BorderSizePixel = 0 
+NoclipButton.Position = UDim2.new(0, 0, 0.4, 0) 
+NoclipButton.Size = UDim2.new(1, 0, 0.2, 0) 
+NoclipButton.Font = Enum.Font.SourceSans 
+NoclipButton.Text = "Noclip" 
+NoclipButton.TextColor3 = Color3.new(0, 0, 0) 
+NoclipButton.TextSize = 25 
+NoclipButton.MouseButton1Click:connect(function() 
+	Character.Humanoid:ChangeState(Enum.HumanoidStateType.Noclip) 
+end) 
+
+-- God Mode Button 
+local GodModeButton = Instance.new("TextButton", MainFrame) 
+GodModeButton.BackgroundColor3 = Color3.new(1, 1, 1) 
+GodModeButton.BorderSizePixel = 0 
+GodModeButton.Position = UDim2.new(0, 0, 0.6, 0) 
+GodModeButton.Size = UDim2.new(1, 0, 0.2, 0) 
+GodModeButton.Font = Enum.Font.SourceSans 
+GodModeButton.Text = "God Mode" 
+GodModeButton.TextColor3 = Color3.new(0, 0, 0) 
+GodModeButton.TextSize = 25 
+GodModeButton.MouseButton1Click:connect(function() 
+	Character.Humanoid.MaxHealth = math.huge 
+	Character.Humanoid.Health = math.huge 
+end) 
+
+--if wanna edit the pos is gotta be at least 0.2 lower
