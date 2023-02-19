@@ -5002,7 +5002,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/anisnouacer1/My-Roblo
 loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/HohoHub.lua'))()
    elseif cht:match("/e cheat") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Chest_onoff"))()
-   elseif cht:match("/e testgui") then
+   elseif cht:match("/e tgui") then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/guixdd",true))()
 
     end
