@@ -53,7 +53,7 @@ this is a custom cmd scirpt
 you can modify and add functions to it :)
 Enjoy!!!!!
 ]]
-local Cmds = {"!list", "!List", "!Info", "!info", "!IY", "!iy", "Iy"} -- you can edit the table for adding commands !!
+local Cmds = {"!list", "!List", "!Info", "!info", "!IY", "!iy", "Iy", "!C1", "!C2", "!c1", "!c2"} -- you can edit the table for adding commands !!
 local Player = game.Players.LocalPlayer
 longnotify("Enjoy!")
 
@@ -117,6 +117,8 @@ end
 addListItem("!list")
 addListItem("!info")
 addListItem("!iy")
+addListItem("!c1")
+addListItem("!c2")
 
 local function filterList(query)
     for _, item in ipairs(scrollingFrame:GetChildren()) do
@@ -165,12 +167,16 @@ end)
 hideButton.MouseButton1Click:Connect(function()
 frame.Visible = false
 end)
-print(Cmds[1], Cmds[4], Cmds[6])
+print(Cmds[1], Cmds[4], Cmds[6], Cmds[8], Cmds[9])
 elseif cht:match(Cmds[3]) or cht:match(Cmds[4]) then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/info.txt",true))()
 notif("Loaded enjoy!")
 elseif cht:match(Cmds[5])  or cht:match(Cmds[6]) or cht:match(Cmds[7]) then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 notif("Ran Successfully!")
+if cht:match(Cmds[8]) or cht:match(Cmds[10]) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/chaos.lua",true))()
+if cht:match(Cmds[9]) or cht:match(Cmds[11]) then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1111-ssss/Chaos_Script/main/Chaos_script.txt'))()
 end
 end)
