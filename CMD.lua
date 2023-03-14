@@ -182,7 +182,7 @@ end
 end)
 
 wait(5)
-notif("Current Ver:0.2")
+notif("Current Ver:0.2 Alpha")
 wait(4)
 notif("Made by Sumeth")
 wait(4)
