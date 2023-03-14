@@ -1,4 +1,48 @@
-works = true
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+gui.ResetOnSpawn = false
+
+local label = Instance.new("TextLabel")
+label.Size = UDim2.new(0, 200, 0, 50)
+label.Position = UDim2.new(0.5, 480, 1, -50)
+label.AnchorPoint = Vector2.new(0.5, 1)
+label.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.Font = Enum.Font.SourceSansBold
+label.TextSize = 20
+label.TextWrapped = true
+label.TextXAlignment = Enum.TextXAlignment.Center
+label.TextYAlignment = Enum.TextYAlignment.Center
+label.Parent = gui
+
+local uicor = Instance.new("UICorner")
+uicor.Parent = label
+
+-- Define a function to show the notification
+function notif(message)
+    label.Text = message
+    label.Visible = true
+    label:TweenPosition(UDim2.new(0.5, 280, 1, -50), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.5, true)
+    wait(2)
+    label:TweenPosition(UDim2.new(0.5, 280, 1, 50), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.5, true)
+    wait(1.5)
+    label.Visible = false
+end
+
+
+-- Define a function to show the notification
+function longnotify(message)
+    label.Text = message
+    label.Visible = true
+    label:TweenPosition(UDim2.new(0.5, 280, 1, -50), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.5, true)
+    wait(10)
+    label:TweenPosition(UDim2.new(0.5, 280, 1, 50), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.5, true)
+    wait(1.5)
+    label.Visible = false
+end
+notif("The commands scirpt is down :(")
+--[[works = true
 print("chaotic cmds by c a t / da memer el gato #0979")
 local Player = game.Players.LocalPlayer
 print("if it doesn't work then this doesn't show up :troll:")
@@ -5011,3 +5055,4 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "Happy Exploiting!";
 	Text = "Din's admin cmds";
 Duration = 16})
+]]
