@@ -59,6 +59,112 @@ longnotify("Enjoy!")
 
 Player.Chatted:connect(function(cht)
 if cht:match(Cmds[1]) or cht:match(Cmds[2]) then
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 200, 0, 300)
+frame.Position = UDim2.new(0.5, -100, 0.5, -150)
+frame.BackgroundTransparency = 0.8
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.Draggable = true
+frame.Active = true
+frame.Parent = gui
+
+local title = Instance.new("TextLabel")
+title.Text = "My List"
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 20
+title.Size = UDim2.new(1, 0, 0, 30)
+title.Position = UDim2.new(0, 0, 0, 0)
+title.TextColor3 = Color3.new(1, 1, 1)
+title.BackgroundTransparency = 1
+title.Parent = frame
+
+local hideButton = Instance.new("TextButton")
+hideButton.Text = "X"
+hideButton.Font = Enum.Font.SourceSansBold
+hideButton.TextSize = 20
+hideButton.Size = UDim2.new(0, 20, 0, 20)
+hideButton.Position = UDim2.new(1, -20, 0, 0)
+hideButton.TextColor3 = Color3.new(1, 1, 1)
+hideButton.BackgroundColor3 = Color3.new(1, 0, 0)
+hideButton.BackgroundTransparency = 0.5
+hideButton.Parent = title
+
+local scrollingFrame = Instance.new("ScrollingFrame")
+scrollingFrame.Size = UDim2.new(1, 0, 1, -60)
+scrollingFrame.Position = UDim2.new(0, 0, 0, 30)
+scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+scrollingFrame.Parent = frame
+
+local searchBox = Instance.new("TextBox")
+searchBox.Size = UDim2.new(1, -10, 0, 20)
+searchBox.Position = UDim2.new(0, 5, 0, 5)
+searchBox.PlaceholderText = "Search..."
+searchBox.Parent = frame
+
+local function addListItem(text)
+    local listItem = Instance.new("TextLabel")
+    listItem.Text = text
+    listItem.Size = UDim2.new(1, 0, 0, 30)
+    listItem.Position = UDim2.new(0, 0, 0, scrollingFrame.CanvasSize.Y.Offset)
+    listItem.Parent = scrollingFrame
+
+    scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, scrollingFrame.CanvasSize.Y.Offset + 30)
+end
+
+addListItem("!list")
+addListItem("!info")
+addListItem("!iy")
+
+local function filterList(query)
+    for _, item in ipairs(scrollingFrame:GetChildren()) do
+        if item:IsA("TextLabel") and not string.find(item.Text:lower(), query) then
+            item.Visible = false
+        else
+            item.Visible = true
+        end
+    end
+end
+
+searchBox.Changed:Connect(function()
+    local query = searchBox.Text:lower()
+    filterList(query)
+end)
+
+local function updateScrollBar()
+    local canvasSize = scrollingFrame.CanvasSize.Y
+scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, scrollingFrame.CanvasSize.Y.Offset + listItem.Size.Y.Offset) -- adjust canvas size to fit new item
+end
+
+--[[ example of adding custom items to the list
+addListItem("Item 1")
+addListItem("Item 2")
+addListItem("Item 3")
+
+-- function to filter items based on search query
+local function filterList(query)
+for _, item in ipairs(scrollingFrame:GetChildren()) do
+if item:IsA("TextLabel") and item.Text:lower():find(query:lower()) then
+item.Visible = true
+else
+item.Visible = false
+end
+end
+end
+]]--
+-- add event listener to search box
+searchBox.Changed:Connect(function(prop)
+if prop == "Text" then
+filterList(searchBox.Text)
+end
+end)
+
+-- add event listener to hide button
+hideButton.MouseButton1Click:Connect(function()
+frame.Visible = false
+end)
 print(Cmds[1], Cmds[4], Cmds[6])
 elseif cht:match(Cmds[3]) or cht:match(Cmds[4]) then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/info.txt",true))()
