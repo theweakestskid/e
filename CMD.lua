@@ -174,9 +174,16 @@ notif("Loaded enjoy!")
 elseif cht:match(Cmds[5])  or cht:match(Cmds[6]) or cht:match(Cmds[7]) then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 notif("Ran Successfully!")
-if cht:match(Cmds[8]) or cht:match(Cmds[10]) then
+elseif cht:match(Cmds[8]) or cht:match(Cmds[10]) then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/chaos.lua",true))()
-if cht:match(Cmds[9]) or cht:match(Cmds[11]) then
+elseif cht:match(Cmds[9]) or cht:match(Cmds[11]) then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/1111-ssss/Chaos_Script/main/Chaos_script.txt'))()
 end
 end)
+
+wait(5)
+notif("Current Ver:0.2")
+wait(4)
+notif("Made by Sumeth")
+wait(4)
+longnotify("added 2 new cmds !c1 and !c2!")
