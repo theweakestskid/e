@@ -41,9 +41,9 @@ function longnotify(message)
     wait(1.5)
     label.Visible = false
 end
-notif("The commands scirpt is down :(")
-works = false
---[[
+notif("The commands scirpt is up!")
+works = true
+
 print("chaotic cmds by c a t / da memer el gato #0979")
 local Player = game.Players.LocalPlayer
 print("if it doesn't work then this doesn't show up :troll:")
@@ -5056,4 +5056,4 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "Happy Exploiting!";
 	Text = "Din's admin cmds";
 Duration = 16})
-]]
+
