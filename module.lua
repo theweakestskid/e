@@ -1,9 +1,10 @@
 --[[
         Ownership: sumeth wisswasopa 
         Age: 11 years old
-        Current Ver: 1.1.1
+        Current Ver: 1.1.2
         1.0.1: Fixed a syntax error.
         1.1.1:Major release. Added 12 functions
+        1.1.2:minor release 1 function added
         Released 1.0.0 at: 10:36 pm 5/5/2023
         Only a config thingy
         Incoming(maybe) functions:
@@ -118,6 +119,14 @@ lib.Clear = function(script)
         return script:gsub("%-%-[^\n]*", "")
     else
         warn("No script input")
+    end
+end
+
+lib.RemoveFile=function(filename)
+    if isfile(filename) then
+        writefile(filename, "--deleted"
+    else
+        warn("no file name or file name is not valid")
     end
 end
 
@@ -265,9 +274,9 @@ return lib
 --[[
         GUIDE ON HOW TO USE!!
         1: Copy and paste this script into workspace of you'r executor
-        2: Define a varible Like this
+        2: or Define a varible Like this
         
-        local lib = dofile(--your saved file name of this!)
+        local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/module.lua"))()
         
         3: After ypu did that the next step is  f u n c t i o n s:
         The first function is
@@ -339,7 +348,7 @@ return lib
         the init is there to be an support number incase its nil
         func will define a function for u to write to how will it work
         Heres an example
-        local lib = dofile(--save name)
+        local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/module.lua"))()
         local array = {1, 2, 3, 4, 5}
         local reduc = lib.Reduce(array, function(arg, arg2)
             return arg + arg2
@@ -350,7 +359,7 @@ return lib
         the func is there for you to define a function to filter the array heres an example
         oh and the array gotta be a table
         here:
-        local lib = dofile("config")
+        local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/module.lua"))()
         local array = {1, 2, 3, 4}
         local function isOdd(n)
           return n % 2 == 1
@@ -361,7 +370,7 @@ return lib
         full detaillllssss
         func will bbe the one that will do them thingys
         array again is a array of numbers in a table
-        local sex = dofile("sex")
+        local sex = loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/module.lua"))()
         local ass = {1, 2}
         function multiply(n)
         return n * 2
@@ -375,4 +384,7 @@ return lib
         local sex = dofile("ass")
         sex.Timer(10, 'print("waites 10 SEXS")')
         it will set a timer of 10 seconds then it will do whatever the func says
+        new func
+        lib.RemoveFile(filename)
+        this only delete the contents of the given filename
 ]]
