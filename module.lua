@@ -1,19 +1,65 @@
 --[[
         Ownership: sumeth wisswasopa 
         Age: 11 years old
-        Current Ver: 1.1.2
+        Current Ver: 1.1.3
         1.0.1: Fixed a syntax error.
         1.1.1:Major release. Added 12 functions
         1.1.2:minor release 1 function added
+        1.1.3:minor release 5 functions added
         Released 1.0.0 at: 10:36 pm 5/5/2023
         Only a config thingy
         Incoming(maybe) functions:
-        none yet :(
+        lib.Destroy
+        lib.GetValue
 ]]
-
+local w = "w"
+local p = "p"
+local e = "err"
 local lib = {}
 local saves = {}
 local Config = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Config-Library/main/Main.lua"))()
+
+lib.LoadUrl=function(url)
+    loadstring(game:HttpGet(url))()
+end
+
+function m(msg, type)
+    if type == "w" then
+        warn(msg)
+    elseif type == "p" then
+        print(msg)
+    elseif type == "err" then
+        error(msg)
+    end
+end
+
+lib.Append=function(filename, append)
+    if isfile(filename) then
+        if append then
+            AppendFile(filename, append)
+            m("Successfully Appended File:" .. filename, p)
+        else
+            m("No code input.", w)
+        end
+    else
+        m("No file name input", w)
+    end
+end
+
+lib.Rewrite=function(filename, contents)
+    if isfile(filename) then
+        if contents then
+            m("Successfully Rewrote" .. filename, p)
+            writefile(filename, contents)
+        end
+    else
+        m("No filename Input", "w")
+    end
+end
+
+lib.Msg=function(msg, type)
+    m(msg, type)
+end
 
 lib.Timer=function(delay, func)
   local t = timer.delayed(delay, func)
@@ -124,7 +170,7 @@ end
 
 lib.RemoveFile=function(filename)
     if isfile(filename) then
-        writefile(filename, "--deleted"
+        writefile(filename, "--deleted")
     else
         warn("no file name or file name is not valid")
     end
@@ -387,4 +433,16 @@ return lib
         new func
         lib.RemoveFile(filename)
         this only delete the contents of the given filename
+        lib.Msg(message, type)
+        this will print a message to console
+        with type having 3 types
+        1st w = warn
+        2nd p = print
+        3rd err = error
+        basically warn() print() error() combined into one
+        lib.Rewrite(filename, contents)
+        will rewrite the given file name with contents
+        lib.Append(filename, contents)
+        will try to find the filename then append it by adding the contents to the last line of the code
+        end
 ]]
