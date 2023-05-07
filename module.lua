@@ -12,12 +12,43 @@
         lib.Destroy
         lib.GetValue
 ]]
+if _G.msg then
+    local msg = _G.msg
+    print("You're the owner!")
+else
+    print("You're a User!")
+end
+local you = game.Players.LocalPlayer
 local w = "w"
 local p = "p"
 local e = "err"
 local lib = {}
 local saves = {}
 local Config = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Config-Library/main/Main.lua"))()
+if gui then
+    gui:Destroy()
+end
+local gui = Instance.new("ScreenGui")
+gui.Parent = game:GetService("CoreGui")
+gui.ResetOnSpawn = false
+
+local label = Instance.new("TextLabel")
+label.Text = "Hello! " .. you.DisplayName .. "/" .. you.Name ..
+label.TextColor3 = Color3.new(1, 1, 1)
+label.BackgroundTransparency = 1
+label.Size = UDim2.new(0, 200, 0, 50)
+label.Position = UDim2.new(1, -220, 0, 20)
+label.AnchorPoint = Vector2.new(1, 0)
+label.Parent = gui
+
+local label1 = Instance.new("TextLabel")
+label1.Text = "Place id:" .. game.PlaceId ..
+label1.TextColor3 = Color3.new(1, 1, 1)
+label1.BackgroundTransparency = 1
+label.Size = UDim2.new(0, 200, 0, 50)
+label1.Position = UDim2.new(1, -220, 0, -20)
+label1.AnchorPoint = Vector2.new(1, 0)
+label1.Parent = gui
 
 lib.LoadUrl=function(url)
     loadstring(game:HttpGet(url))()
@@ -51,6 +82,8 @@ lib.Rewrite=function(filename, contents)
         if contents then
             m("Successfully Rewrote" .. filename, p)
             writefile(filename, contents)
+        else
+            m("File name is presented. But no contents", w)
         end
     else
         m("No filename Input", "w")
