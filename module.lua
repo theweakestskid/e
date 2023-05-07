@@ -12,6 +12,14 @@
         lib.Destroy
         lib.GetValue
 ]]
+function isfile(file)
+    local file = readfile(file)
+    if file then
+        return true
+    else
+        return false
+    end
+end
 if _G.msg then
     local msg = _G.msg
     print("You're the owner!")
@@ -33,7 +41,7 @@ gui.Parent = game:GetService("CoreGui")
 gui.ResetOnSpawn = false
 
 local label = Instance.new("TextLabel")
-label.Text = "Hello! " .. you.DisplayName .. "/" .. you.Name ..
+label.Text = "Hello! " .. you.DisplayName .. "/" .. you.Name
 label.TextColor3 = Color3.new(1, 1, 1)
 label.BackgroundTransparency = 1
 label.Size = UDim2.new(0, 200, 0, 50)
@@ -42,10 +50,10 @@ label.AnchorPoint = Vector2.new(1, 0)
 label.Parent = gui
 
 local label1 = Instance.new("TextLabel")
-label1.Text = "Place id:" .. game.PlaceId ..
+label1.Text = "Place id:" .. game.PlaceId
 label1.TextColor3 = Color3.new(1, 1, 1)
 label1.BackgroundTransparency = 1
-label.Size = UDim2.new(0, 200, 0, 50)
+label1.Size = UDim2.new(0, 200, 0, 50)
 label1.Position = UDim2.new(1, -220, 0, -20)
 label1.AnchorPoint = Vector2.new(1, 0)
 label1.Parent = gui
@@ -61,6 +69,24 @@ function m(msg, type)
         print(msg)
     elseif type == "err" then
         error(msg)
+    end
+end
+
+function AppendFile(filename, append)
+    if isfile(filename) then
+        if append then
+            local r = readfile(filename)
+            writefile(filename, r .. "\n" .. append)
+            m("appended file" .. filename, p)
+        else
+            m("no code input.", w)
+        end
+    else
+        if filename then
+            m("invalid file name", w)
+        else
+            m("No file name input.", w)
+        end
     end
 end
 
