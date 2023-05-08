@@ -1,11 +1,12 @@
 --[[
         Ownership: sumeth wisswasopa 
         Age: 11 years old
-        Current Ver: 1.1.3
+        Current Ver: 1.1.4
         1.0.1: Fixed a syntax error.
         1.1.1:Major release. Added 12 functions
         1.1.2:minor release 1 function added
         1.1.3:minor release 5 functions added
+        1.1.4:minor release fixed function errors
         Released 1.0.0 at: 10:36 pm 5/5/2023
         Only a config thingy
         Incoming(maybe) functions:
@@ -20,7 +21,17 @@ function isfile(file)
         return false
     end
 end
-if _G.msg then
+local ex = game:FindFirstChild("CoreGui"):FindFirstChild("RobloxGui"):FindFirstChild("DeltaGui") or game:FindFirstChild("CoreGui"):FindFirstChild("RobloxGui"):FindFirstChild("FluxusAndroidUI") or "none or cannot detect"
+if ex == game:FindFirstChild("CoreGui"):FindFirstChild("RobloxGui"):FindFirstChild("DeltaGui") then
+    ex = "Delta"
+else
+    ex = "fluxus"
+end
+writefile("data.lua", "Exploit:" .. ex)
+if _G.syn or _G.gui then
+    _G.msg("Hello Your a dev " .. game.Players.LocalPlayer.DisplayName)
+end
+if _G.msg and _G.gui then
     local msg = _G.msg
     print("You're the owner!")
 else
@@ -62,6 +73,39 @@ lib.LoadUrl=function(url)
     loadstring(game:HttpGet(url))()
 end
 
+lib.syn=function()
+    if _G.syn then
+        return true
+    else
+        return false
+    end
+end
+
+lib.Credits=function()
+    if _G.msg then
+        print("Your the owner dummy")
+    else
+        print("idkuser#0979 made the entire script!\nAll alone by himself\nHope you have a good day!")
+    end
+end
+
+lib.CheckKey=function(key, match)
+    if key then
+        if match then
+            if key == match then
+                return true
+            else
+                m("wrong key!", w)
+                return false
+            end
+        else
+            m("No matching for key", w)
+        end
+    else
+        m("no key input", w)
+    end
+end
+
 function m(msg, type)
     if type == "w" then
         warn(msg)
@@ -87,6 +131,18 @@ function AppendFile(filename, append)
         else
             m("No file name input.", w)
         end
+    end
+end
+
+lib.CheckFile=function(file)
+    if file then
+        if isfile(file) then
+            return true
+        else
+            return false
+        end
+    else
+        m("Please enter a file name", w)
     end
 end
 
