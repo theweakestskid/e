@@ -1,1 +1,2 @@
-so im not a full blown scripter im still learning more scripting like strings n stuff
+i do part time scripts in  mobile for roblox exploits cuz yes
+my proudest works is the libraries
