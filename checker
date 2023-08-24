@@ -1,7 +1,5 @@
-if works = false then
-print("exploit not supported or bugged")
-elseif works = true then
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "Happy Exploiting!";
-	Text = "Scirpt ran without any problems!";
-Duration = 16})
+if _G.IsThisMine then
+print("yes niggar")
+else
+return end, "fuck you."
+end
