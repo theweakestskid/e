@@ -1,5 +1,6 @@
 --{         Encoding, Decoding, table And writefile Management         }--
 --Varibles--
+_G.IsThisMine=true
 local emoji_goofy = '🥴'
 local wf = function(n, dat) repeat wait() until writefile writefile(n, dat) end if not wf then wf = function(...) print("unsupported") return ... end end;
 local nums_and_letters = {1, "-a", 2, "b&c", "B&E", "CB&", "ag.bc$&", 3, 4, 5, 6, 7, 8, 9, 0}
