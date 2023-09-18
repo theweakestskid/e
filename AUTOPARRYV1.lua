@@ -1,7 +1,7 @@
 function irp(limit)
     limit = math.max(0, limit) -- Ensure limit is non-negative
     local returnPoint = 0.0
-    if limit < 400 then
+    if limit < 350 then
         for i = 1, limit do
             if i % 1 == 0 then
                 returnPoint = returnPoint + 0.1
