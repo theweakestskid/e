@@ -1,7 +1,7 @@
 function irp(limit)
     limit = math.max(0, limit) -- Ensure limit is non-negative
     local returnPoint = 0.0
-    if limit < 350 then
+    if limit < 325 then
         for i = 1, limit do
             if i % 1 == 0 then
                 returnPoint = returnPoint + 0.1
@@ -109,7 +109,7 @@ end
         local timeToImpact = timeUntilImpact(ball.Velocity, distanceToPlayer, charVel)
         local diectionToPlayer = (character.HumanoidRootPart.Position - focusedBall.Position).Unit
         local velocity = ball.Velocity:Dot(diectionToPlayer) - charVel:Dot(diectionToPlayer)
-        local ad = 10 + irp(velocity)
+        local ad = 5.5 + irp(velocity)
         if distanceToPlayer < ad then
             parryButtonPress:Fire()
             return
