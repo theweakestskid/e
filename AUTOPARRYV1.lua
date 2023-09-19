@@ -1,3 +1,11 @@
+function ntf(t, d, du)
+    StarterGui:SetCore("SendNotification", {
+        Title = t,
+        Text = d,
+        Duration = du
+    })
+end
+nft("Thanks!", "ty for using thweakestskid's!", 16)
 function irp(limit)
     limit = math.max(0, limit) -- Ensure limit is non-negative
     local returnPoint = 0.0
