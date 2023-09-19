@@ -16,7 +16,7 @@ function irp(limit)
             end
         end
     else
-        if limit < 600
+        if limit < 600 then
         for i = 1, limit do
             if i % 1 == 0 then
                 returnPoint = returnPoint + 0.25
