@@ -1,3 +1,4 @@
+local StarterGui = game:GetService("StarterGui")
 function ntf(t, d, du)
      StarterGui:SetCore("SendNotification", {
         Title = t,
