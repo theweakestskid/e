@@ -1,3 +1,6 @@
+if not _G.DEFAULTDISTANCE then
+     _G.STARTERDISTANCE = 10
+end
 local StarterGui = game:GetService("StarterGui")
 function ntf(t, d, du)
      StarterGui:SetCore("SendNotification", {
@@ -126,7 +129,8 @@ end
         local timeToImpact = timeUntilImpact(ball.Velocity, distanceToPlayer, charVel)
         local diectionToPlayer = (character.HumanoidRootPart.Position - focusedBall.Position).Unit
         local velocity = ball.Velocity:Dot(diectionToPlayer) - charVel:Dot(diectionToPlayer)
-        local ad = 5.5 + irp(velocity)
+        local DF = _G.DEFAULTDISTANCE or _G.STARTERDISTANCE
+        local ad = DF + irp(velocity)
         if distanceToPlayer < ad then
             parryButtonPress:Fire()
             return
