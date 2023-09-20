@@ -9,7 +9,7 @@ function ntf(t, d, du)
         Duration = du
     })
 end
-ntf("Thanks!", "ty for using thweakestskid's!", 16)
+ntf("Settings.", "Current Default scaling: " .. _G.DEFAULTDISTANCE or _g.STARTERDISTANCE .. " plzplz go visit theweakestskid on github!1!", 16)
 function irp(limit)
     limit = math.max(0, limit) -- Ensure limit is non-negative
     local returnPoint = 0.0
