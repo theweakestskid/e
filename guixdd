@@ -1,69 +1,204 @@
-local Player = game.Players.LocalPlayer 
-local Character = Player.Character 
+-- Create a ScreenGui to hold the GUI elements
+local gui = Instance.new("ScreenGui")
+gui.Name = "uwu"
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+gui.ResetOnSpawn = false
+gui.IgnoreGuiInset = false
+gui.DisplayOrder = 1
 
--- GUI Window 
-local GUI = Instance.new("ScreenGui", Player.PlayerGui) 
-GUI.Name = "Exploit GUI" 
+local new = Instance.new("ScreenGui")
+new.Name = math.random()
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+new.ResetOnSpawn = false
+new.DisplayOrder = 1
 
--- Main Frame 
-local MainFrame = Instance.new("Frame", GUI) 
-MainFrame.BackgroundColor3 = Color3.new(0, 0, 0) 
-MainFrame.BorderSizePixel = 0 
-MainFrame.Position = UDim2.new(0.5, -150, 0.5, -150) 
-MainFrame.Size = UDim2.new(0, 300, 0, 300) 
 
--- Title 
-local Title = Instance.new("TextLabel", MainFrame) 
-Title.BackgroundColor3 = Color3.new(1, 1, 1) 
-Title.BorderSizePixel = 0 
-Title.Position = UDim2.new(0, 0, 0, 0) 
-Title.Size = UDim2.new(1, 0, 0.2, 0) 
-Title.Font = Enum.Font.SourceSans 
-Title.Text = "Exploit GUI" 
-Title.TextColor3 = Color3.new(0, 0, 0) 
-Title.TextSize = 25 
+--// Create a function to add a new button \\--
+function ab(hov, text, callback)
+    local button = Instance.new("TextButton")
+    button.Name = "Buttongayastodk0"
+    button.Text = text
+local infoLabel = Instance.new("TextLabel")
+infoLabel.BackgroundTransparency = 0.1
+infoLabel.Position = UDim2.new(0, -500, 0, 0)
+infoLabel.BackgroundColor3 = Color3.fromRGB(23, 22, 22)
+infoLabel.Size = UDim2.new(0, 200, 0, 20)
+infoLabel.TextColor3 = Color3.new(1, 1, 1)
+infoLabel.TextStrokeTransparency = 1
+infoLabel.TextXAlignment = Enum.TextXAlignment.Left
+infoLabel.Font = Enum.Font.Michroma
+infoLabel.Parent = gui
+infoLabel.TextSize = 18.00
+-- add mouse hover event
+button.MouseEnter:Connect(function(x, y)
+    infoLabel.Text = hov
+    infoLabel.Position = UDim2.new(0, x, 0, y)
+    infoLabel.Visible = true
+end)
 
--- Teleport Button 
-local TeleportButton = Instance.new("TextButton", MainFrame) 
-TeleportButton.BackgroundColor3 = Color3.new(1, 1, 1) 
-TeleportButton.BorderSizePixel = 0 
-TeleportButton.Position = UDim2.new(0, 0, 0.2, 0) 
-TeleportButton.Size = UDim2.new(1, 0, 0.2, 0) 
-TeleportButton.Font = Enum.Font.SourceSans 
-TeleportButton.Text = "Teleport" 
-TeleportButton.TextColor3 = Color3.new(0, 0, 0) 
-TeleportButton.TextSize = 25 
-TeleportButton.MouseButton1Click:connect(function() 
-	Character:MoveTo(workspace.SpawnLocation.Value) 
-end) 
+button.MouseLeave:Connect(function()
+    infoLabel.Visible = false
+end)
 
--- Noclip Button 
-local NoclipButton = Instance.new("TextButton", MainFrame) 
-NoclipButton.BackgroundColor3 = Color3.new(1, 1, 1) 
-NoclipButton.BorderSizePixel = 0 
-NoclipButton.Position = UDim2.new(0, 0, 0.4, 0) 
-NoclipButton.Size = UDim2.new(1, 0, 0.2, 0) 
-NoclipButton.Font = Enum.Font.SourceSans 
-NoclipButton.Text = "Noclip" 
-NoclipButton.TextColor3 = Color3.new(0, 0, 0) 
-NoclipButton.TextSize = 25 
-NoclipButton.MouseButton1Click:connect(function() 
-	Character.Humanoid:ChangeState(Enum.HumanoidStateType.Noclip) 
-end) 
+    --// Set up the button's click event \\--
+    button.MouseButton1Click:Connect(callback)
 
--- God Mode Button 
-local GodModeButton = Instance.new("TextButton", MainFrame) 
-GodModeButton.BackgroundColor3 = Color3.new(1, 1, 1) 
-GodModeButton.BorderSizePixel = 0 
-GodModeButton.Position = UDim2.new(0, 0, 0.6, 0) 
-GodModeButton.Size = UDim2.new(1, 0, 0.2, 0) 
-GodModeButton.Font = Enum.Font.SourceSans 
-GodModeButton.Text = "God Mode" 
-GodModeButton.TextColor3 = Color3.new(0, 0, 0) 
-GodModeButton.TextSize = 25 
-GodModeButton.MouseButton1Click:connect(function() 
-	Character.Humanoid.MaxHealth = math.huge 
-	Character.Humanoid.Health = math.huge 
-end) 
+    return button
+end
 
---if wanna edit the pos is gotta be at least 0.2 lower
+--// Create a function to add a new frame \\--
+function af(size, position, color)
+    local frame = Instance.new("Frame")
+    frame.Name = "Frame"
+    frame.Size = size
+    frame.Position = position
+    frame.BackgroundColor3 = color
+    
+    return frame
+end
+
+--// Create a function to add new text \\--
+function at(text, size, position)
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Name = "Text"
+    textLabel.Text = text
+    textLabel.Size = size
+    textLabel.Position = position
+    textLabel.Parent = gui
+
+    return textLabel
+end
+--// \/Main Gui\/ \\--
+local f2 = af(UDim2.new(0, 315, 0, 50), UDim2.new(0, -265, 0, 0), Color3.fromRGB(11.5, 11, 11)) 
+f2.Parent = gui
+local f3 = af(UDim2.new(0, 315, 0, 50), UDim2.new(0, -265, 0, 0), Color3.fromRGB(11.5, 11, 11)) 
+f3.Parent = gui
+gay = true
+local mainf = af(UDim2.new(0, 350, 0, 300), UDim2.new(0.5, -175, 0.5, 400), Color3.fromRGB(11.5, 11, 11))
+mainf.Parent = gui
+mainf.Visible = true
+mainf.Draggable = true
+local top = af(UDim2.new(0, 350, 0, 50), UDim2.new(0, -0, 0, 0), Color3.fromRGB(23, 22, 22))
+top.Parent = mainf
+local b1 = ab("shows the gui.", ">", function()
+if gay == false then
+gay = not gay
+--mainf.Visible = true
+f2:TweenSizeAndPosition(UDim2.new(0, 250, 0, 50), UDim2.new(0, -265, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.9, true)
+else
+gay = not gay
+--mainf.Visible = false
+f2:TweenSizeAndPosition(UDim2.new(0, 250, 0, 50), UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5, true)
+end
+end)
+
+
+-- Change the button's appearance
+b1.BackgroundColor3 = Color3.fromRGB(46, 44, 44)
+b1.TextColor3 = Color3.new(1, 1, 1)
+b1.Size = UDim2.new(0, 40, 0, 40)
+b1.Position = UDim2.new(0, 5, 0, 5)
+b1.TextSize = 20.00
+
+local f1 = af(UDim2.new(0, 50, 0, 50), UDim2.new(0, 0, 0, 0), Color3.fromRGB(23, 22, 22))
+-- Add a button to the GUI
+local bf = af(UDim2.new(0, 50, 0, 50), UDim2.new(0, 200, 0, 0), Color3.fromRGB(23, 22, 22))
+bf.Parent = f2
+
+
+local bmain = ab("destroys the gui.", "•|•", function()
+gui:Destroy()
+end)
+bmain.BackgroundColor3 = Color3.fromRGB(46, 44, 44)
+bmain.TextColor3 = Color3.new(1, 1, 1)
+bmain.Size = UDim2.new(0, 40, 0, 40)
+bmain.Position = UDim2.new(0, 5, 0, 5)
+bmain.TextSize = 20.00
+bmain.Parent = bf
+-- Change the frame's appearance
+local bf2 = af(UDim2.new(0, 50, 0, 50), UDim2.new(0, 150, 0, 0), Color3.fromRGB(23, 22, 22))
+bf2.Parent = f2
+bf2:TweenSize(UDim2.new(0, 50, 0, 50), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
+local gay2 = true
+local bmain1 = ab("shows smth up", "•", function()
+if gay2 then
+gay2 = not gay2
+mainf:TweenSizeAndPosition(UDim2.new(0, 350, 0, 300), UDim2.new(0.5, -175, 0.5, -150), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.5, true)
+else
+gay2 = not gay2
+mainf:TweenSizeAndPosition(UDim2.new(0, 350, 0, 300), UDim2.new(0.5, -175, 0.5, 400), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.9, true)
+end
+end)
+bmain1.BackgroundColor3 = Color3.fromRGB(46, 44, 44)
+bmain1.TextColor3 = Color3.new(1, 1, 1)
+bmain1.Size = UDim2.new(0, 40, 0, 40)
+bmain1.Position = UDim2.new(0, 5, 0, 5)
+bmain1.TextSize = 20.00
+bmain1.Parent = bf2
+
+local c1 = Instance.new("UICorner")
+c1.CornerRadius = UDim.new(0,200)
+c1.Parent = f1
+
+local c2 = Instance.new("UICorner")
+c2.CornerRadius = UDim.new(0,200)
+c2.Parent = b1
+
+local c3 = Instance.new("UICorner")
+c3.CornerRadius = UDim.new(0,200)
+c3.Parent = f2
+
+local c23 = Instance.new("UICorner")
+c23.CornerRadius = UDim.new(0,200)
+c23.Parent = f3
+
+local c4 = Instance.new("UICorner")
+c4.Parent = mainf
+
+--local c44 = Instance.new("UICorner")
+--c44.Parent = top
+
+local ce4 = Instance.new("UICorner")
+ce4.CornerRadius = UDim.new(0,200)
+ce4.Parent = bmain
+
+local ce14 = Instance.new("UICorner")
+ce14.CornerRadius = UDim.new(0,200)
+ce14.Parent = bmain1
+
+local cee4 = Instance.new("UICorner")
+cee4.CornerRadius = UDim.new(0,200)
+cee4.Parent = bf
+
+local ce4e = Instance.new("UICorner")
+ce4e.CornerRadius = UDim.new(0,200)
+ce4e.Parent = infoLabel
+
+local ceee4 = Instance.new("UICorner")
+ceee4.CornerRadius = UDim.new(0,200)
+ceee4.Parent = bf2
+
+f1.Parent = gui
+b1.Parent = gui
+--// End All functions and script \\--
+          --// CREDITS \\--
+          -- idkuser#0979-- < check him out
+          ---------------------------
+          mainf.Active = true
+apply=function(what)
+    local g = Instance.new("UICorner")
+    g.Parent = what
+    return g
+end
+
+drag=function(what)
+    what.Draggable = true
+    what.Active = true
+end
+
+circle=function(what)
+    local g = apply(what)
+    g.CornerRadius = UDim.new(0,200)
+    return g
+end
+apply(top)
