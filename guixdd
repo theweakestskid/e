@@ -8,7 +8,7 @@ gui.DisplayOrder = 1
 
 local new = Instance.new("ScreenGui")
 new.Name = math.random()
-gui.Parent = game.Players.LocalPlayer.PlayerGui
+new.Parent = game.Players.LocalPlayer.PlayerGui
 new.ResetOnSpawn = false
 new.DisplayOrder = 1
 
@@ -57,6 +57,17 @@ function af(size, position, color)
     return frame
 end
 
+asf=function(size, position, color, can)
+    local frame = Instance.new("ScrollingFrame")
+    frame.Name = "Frame"
+    frame.Size = size
+    frame.Position = position
+    frame.BackgroundColor3 = color
+    frame.CanvasSize = can
+    
+    return frame
+end
+
 --// Create a function to add new text \\--
 function at(text, size, position)
     local textLabel = Instance.new("TextLabel")
@@ -78,8 +89,10 @@ local mainf = af(UDim2.new(0, 350, 0, 300), UDim2.new(0.5, -175, 0.5, 400), Colo
 mainf.Parent = gui
 mainf.Visible = true
 mainf.Draggable = true
-local top = af(UDim2.new(0, 350, 0, 50), UDim2.new(0, -0, 0, 0), Color3.fromRGB(23, 22, 22))
+local top = af(UDim2.new(0, 350, 0, 40), UDim2.new(0, -0, 0, 0), Color3.fromRGB(23, 22, 22))
 top.Parent = mainf
+--[[local tab = af(UDim2.new(0, 30, 0, 300), UDim2.new(0, -0, 0, 0), Color3.fromRGB(23, 22, 22))
+tab.Parent = mainf]]
 local b1 = ab("shows the gui.", ">", function()
 if gay == false then
 gay = not gay
@@ -180,11 +193,7 @@ ceee4.Parent = bf2
 
 f1.Parent = gui
 b1.Parent = gui
---// End All functions and script \\--
-          --// CREDITS \\--
-          -- idkuser#0979-- < check him out
-          ---------------------------
-          mainf.Active = true
+mainf.Active = true
 apply=function(what)
     local g = Instance.new("UICorner")
     g.Parent = what
@@ -201,4 +210,10 @@ circle=function(what)
     g.CornerRadius = UDim.new(0,200)
     return g
 end
-apply(top)
+--apply(top)
+top.BorderSizePixel = 0
+--// End All functions and script \\--
+          --// CREDITS \\--
+          -- white_coem -- < check him out
+          ---------------------------
+          
