@@ -1,0 +1,36 @@
+local ui = {}
+
+ui.MakeWindow = function()
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "simple UI"
+    gui.IgnoreGuiInset = true
+    gui.ResetOnSpawn = false
+    gui.Parent = game:GetService("CoreGui")
+    local main = Instance.new("Frame")
+    main.Size = UDim2.new(0,300,0,350)
+    main.Position = UDim2.new(0,301,0,163)
+    main.Active = true
+    main.BackgroundColor3 = Color3.fromRGB(65,65,65)
+    main.Draggable = true
+    main.Name = "Main"
+    main.Parent = gui
+    local corner = Instance.new("UICorner")
+    corner.Parent = main
+    local inner = Instance.new("Frame")
+    inner.BackgroundColor3 = Color3.fromRGB(90,90,90)
+    inner.Size = UDim2.new(0,288,0,21)
+    inner.Position = UDim2.new(0.02,0,0.046,0)
+    inner.Parent = main
+    local corner1 = Instance.new("UICorner")
+    corner1.Parent = inner
+    local mini = Instance.new("TextButton")
+    mini.BackgroundTransparency = 1
+    mini.Size = UDim2.new(0,32,0,16)
+    mini.Position = UDim2.new(0.813,0,0,0)
+    mini.Parent = main
+    mini.Text = "-"
+    mini.TextColor3 = Color3.fromRGB(255,255,255)
+    local func = {}
+end
+
+return ui
