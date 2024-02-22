@@ -37,6 +37,7 @@ function irp(limit)
     return returnPoint
 end
 local USEMOD = false
+spawn(function()
 while true do
 function gs(p, se)
 return p:GetService(tostring(se))
@@ -174,4 +175,5 @@ end
     wait(2)
     VELUI:Destroy()
 end
+     end)
 ntf("Notification", "Script loaded! if this message didn't show up please look in console by pressing F9 or type /console in chat to see the error and report it to me!", 16)
