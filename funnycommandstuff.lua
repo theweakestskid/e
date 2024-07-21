@@ -4,7 +4,7 @@ local lp=plrs.LocalPlayer
 
 lp.Chatted:Connect(function(c)
     local command, arg = c:match("^(%S+)%s*(.*)$")
-    if _G.Commands:command then
+    if _G.Commands[command] then
         _G.Commands[command](arg)
     end
 end)
