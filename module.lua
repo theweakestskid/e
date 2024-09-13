@@ -1,6 +1,5 @@
 --[[
-        Ownership: sumeth wisswasopa 
-        Age: 11 years old
+        Ownership: me
         Current Ver: 1.1.4
         1.0.1: Fixed a syntax error.
         1.1.1:Major release. Added 12 functions
