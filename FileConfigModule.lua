@@ -1,5 +1,5 @@
 --[[
-        last edited: 1 year ago(more or less)
+        last edited: 1 year ago(more or less, not accurate since removing some stuff that is pretty much useless)
         Current Ver: 1.1.5
         1.0.1: Fixed a syntax error.
         1.1.1:Major release. Added 12 functions
@@ -28,30 +28,6 @@ local e = "err"
 local lib = {}
 local saves = {}
 local Config = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Config-Library/main/Main.lua"))()
-if gui then
-    gui:Destroy()
-end
-local gui = Instance.new("ScreenGui")
-gui.Parent = game:GetService("CoreGui")
-gui.ResetOnSpawn = false
-
-local label = Instance.new("TextLabel")
-label.Text = "Hello! " .. you.DisplayName .. "/" .. you.Name
-label.TextColor3 = Color3.new(1, 1, 1)
-label.BackgroundTransparency = 1
-label.Size = UDim2.new(0, 200, 0, 50)
-label.Position = UDim2.new(1, -220, 0, 20)
-label.AnchorPoint = Vector2.new(1, 0)
-label.Parent = gui
-
-local label1 = Instance.new("TextLabel")
-label1.Text = "Place id:" .. game.PlaceId
-label1.TextColor3 = Color3.new(1, 1, 1)
-label1.BackgroundTransparency = 1
-label1.Size = UDim2.new(0, 200, 0, 50)
-label1.Position = UDim2.new(1, -220, 0, -20)
-label1.AnchorPoint = Vector2.new(1, 0)
-label1.Parent = gui
 
 function m(msg, type)
     if type == "w" then
@@ -324,7 +300,7 @@ end
 
 lib.RemoveFile=function(filename)
     if isfile(filename) then
-        writefile(filename, "--deleted")
+        delfile(filename)
     else
         warn("no file name or file name is not valid")
     end
@@ -360,7 +336,7 @@ lib.Call=function(name)
             print("Successfully executed")
         end
     else
-        warn(name .. "Is not a valid file name.")
+        warn(name .. " Is not a valid file name.")
     end
 end
 
