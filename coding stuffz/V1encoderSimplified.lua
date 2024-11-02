@@ -25,6 +25,7 @@ function l.save_table(n, tbl) wf_enc(n, tbl) if isfile(n) then l.decsave_file(n)
 function l.concat_table(tbl) return "{'" .. n .. "', \"" .. table.concat(tbl, '", "') .. "\"}" end;
 function l.call_in_file(n) if isfile(n) then return dofile(n) end end;
 function l.rna(nm) if nm then return l.random_numbers_and_letter(nm) else return end end end
+print('loaded encoder successfully')
 return l
 --/End Main Functions\--
 --{         Nothing much of An Script          }--
